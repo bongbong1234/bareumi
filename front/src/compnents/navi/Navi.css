@@ -1,3 +1,4 @@
+
 .navi-container {
     background-color: #fff;
     display: flex;
@@ -7,24 +8,25 @@
     width: 600px; height: 60px;
     border-top: 0.5px solid black ;
   }
-
+  
   .navi-container div {
     width: 35px;
     margin: 9px 0 0 80px;
   }
-  .navi-container div:first-child {
-    margin-left: 115px;
-  }
+
   .navi-container div:hover {
     cursor: pointer;
   }
 
+  .navi-container a:first-child {
+    margin-left: 20px ;
+  }
+
   .navi-container p {
-    margin-top: 3px;
     color: #c9c9c9;
     text-align: center;
     font-family: "Noto Sans KR";
-    font-size: 12px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -32,24 +34,24 @@
 
   .fa-house {
     color: #c9c9c9;
-    margin: 0 5px;
+    margin: 0 9px;
     width: 24px; height: 24px;
   }
   
   .fa-clock-rotate-left {
     color: #c9c9c9;
-    margin: 0 8px;
+    margin: 0 13px;
     width: 24px; height: 24px;
   }
 
   .fa-basket-shopping {
     color: #c9c9c9;
-    margin: 0 9px;
+    margin: 0 16px;
     width: 24px; height: 24px;
   }
 
   .fa-user{
     color: #c9c9c9;
-    margin: 0 10px;
+    margin: 0 16px;
     width: 24px; height: 24px;
   }
