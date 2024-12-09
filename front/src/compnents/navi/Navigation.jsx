@@ -31,7 +31,7 @@ const Navigation = () => {
             }}/>
             <p style={{
                 color: select === 'history' ? '#001D6E' : ''
-            }}>History</p>
+            }}>History?</p>
         </div>
         <div className='product' onClick={(e) => {changeNavi(e)}} ref={ naviRef }>
             <FontAwesomeIcon icon={faBasketShopping} style={{
