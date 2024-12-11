@@ -39,7 +39,6 @@ function App() {
           <Route path="/my-page" element={<MyPage/>}></Route>
           <Route path="/history"></Route>
           <Route path="/product" element={<Product/>}></Route>
-          <Route path="/product"></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/signup' element={<Signup/>}></Route>
         </Routes>
