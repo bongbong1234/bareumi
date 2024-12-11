@@ -29,7 +29,7 @@ function MyPage() {
           <div>
             {/* 진동 세기 변경 */}
             <h4>진동 세기 변경</h4>
-            <div className="box">
+            <div className="vib-box">
               <div className="vibration-control">
                 <input type="range" min="1" max="10" className="slider" />
                 <div className="buttons">
@@ -41,7 +41,7 @@ function MyPage() {
 
             {/* 알림 강화 */}
             <h4>알림 강화</h4>
-            <div className="box">
+            <div className="alert-box">
               <div className="sub-box1">
                 <p>평균 알람 시간 <span>00 : 00 ~ 00 : 00</span></p>
               </div>
@@ -66,7 +66,7 @@ function MyPage() {
 
             {/* 알림 일시정지 */}
             <h4>알림 일시정지</h4>
-            <div className="box">
+            <div className="pause-box">
               <div className="sub-box">
                 <h3>일시 정지 시간</h3>
                 <p>00:00 ~ 00:00</p>
