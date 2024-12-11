@@ -1,4 +1,4 @@
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import './App.css';
 import Navigation from './compnents/navi/Navigation';
 import Main from './compnents/main/Main';
@@ -7,11 +7,11 @@ import Product from './compnents/Product/Product';
 import Login from './compnents/login/Login';
 import { useEffect } from 'react';
 import api from './config/api.config';
+import Signup from './compnents/signup/Signup';
 
 function App() {
 
   const nav = useNavigate();
-
   const sessionId = "session-id";
 
   useEffect(()=> {
@@ -28,6 +28,10 @@ function App() {
       nav("/login");
      })
   },[])
+
+
+
+
   return (
     <div className="mobile-container">
         <Routes>
@@ -37,6 +41,7 @@ function App() {
           <Route path="/product" element={<Product/>}></Route>
           <Route path="/product"></Route>
           <Route path='/login' element={<Login/>}></Route>
+          <Route path='/signup' element={<Signup/>}></Route>
         </Routes>
         <Navigation></Navigation>
     </div>

@@ -3,7 +3,7 @@
     background-color: #fff;
     display: flex;
     position: fixed;
-    bottom: 0;
+    bottom:0;
     min-width: 412px;
     width: 600px; height: 60px;
     border-top: 0.5px solid black ;

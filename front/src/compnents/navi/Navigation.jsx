@@ -4,15 +4,38 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBasketShopping, faClockRotateLeft, faHouse } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import {} from '@fortawesome/free-brands-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import api from '../../config/api.config';
 const Navigation = () => {
 
+    const nav = useNavigate();
     const [select, setSelect] = useState('home')
-    
     const naviRef = useRef();
 
+  
+    const sessionId = "session-id";
+
     useEffect(() => {
-    },[select])
+        api.get("./auth/session-chk",{
+            headers: {
+                Cookie: `session-id=${sessionId}`,
+            }
+            })
+            .then(res => {
+                if(select === "home") {
+                    nav("/");
+                } else if (select === "history") {
+                    nav("../history");
+                } else if (select === "product") {
+                    nav("/product");
+                } else if (select === "mypage") {
+                    nav("/my-page");
+                }
+            }).catch(err => {
+            console.error(err)
+            nav("/login");
+            })
+    },[select])    
 
     const changeNavi = (e) => {
         const targetName = e.currentTarget.querySelector('p').innerText;

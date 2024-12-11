@@ -22,7 +22,7 @@ const Login = () => {
             navigate('../')
           }
         }).catch(err => {
-          console.err(err)
+          console.error(err)
           idRef.current.value = '';
           pwRef.current.value = '';
 
