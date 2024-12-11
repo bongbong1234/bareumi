@@ -47,9 +47,11 @@ exports.signup = async (id,pwd,name,email) => {
         conn.query(sql,[id,pwd,name,email],(err, rows)=> {
             if(err) {
                 console.log(err);
+                conn.rollback();
                 reject(false);
             } else if(rows) {
                 console.log(rows);
+                conn.commit();
                 resolve(true);
             }
         })
