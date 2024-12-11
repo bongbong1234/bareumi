@@ -4,6 +4,7 @@ import Navigation from './compnents/navi/Navigation';
 import Main from './compnents/main/Main';
 
 function App() {
+  // 테스트중
   return (
     <div className="mobile-container">
         <Routes>
