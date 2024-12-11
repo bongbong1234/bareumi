@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Sans KR';
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.mypage-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+/* 탭 네비게이션 스타일 */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 15px 0;
+    border: 1px solid transparent;
+    background: #f2f2f2;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tabs button.active {
+    color: #000000;
+    transform: scale(1.1);
+    /* 클릭 시 확대 효과 */
+    font-size: 18px;
+    /* 글씨 크기 조정 */
+}
+
+/* 박스 스타일 */
+.box {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.box h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.sub-box {
+    background-color: #001d6e;
+    width: 90%;
+    height: 65px;
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.sub-box1 {
+    background-color: #001d6e;
+    width: 90%;
+    height: 65px;
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.sub-box1 p {
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.sub-box1 p>span {
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row label {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.row input {
+    flex: 2;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: #003d8b;
+}
