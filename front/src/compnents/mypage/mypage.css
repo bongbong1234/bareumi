@@ -45,8 +45,11 @@ body {
 }
 
 /* 박스 스타일 */
-.vib-box{
-    width : 90%; height : 108px;
+.vib-box {
+    width: 90%;
+    height: 108px;
+    padding: 25px;
+    margin: 10px 0 20px 0;
     border-radius: 5px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -54,16 +57,22 @@ body {
 
 .alert-box {
     background-color: #f9f9f9;
-    border-radius: 10px;
+    height : 550px;
+    border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
+    margin-top: 10px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.pause-box{
+.pause-box {
     background-color: #001d6e;
+    margin-top: 10px;
+    padding: 25px;
     overflow: hidden;
-    width : 90%; height : 150px;
+    border-radius: 5px;
+    width: 90%;
+    height: 150px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -74,15 +83,6 @@ body {
     margin-bottom: 10px;
 }
 
-.sub-box {
-    background-color: #fff;
-    width: 90%;
-    height: 65px;
-    border-radius: 5px;
-    padding: 15px;
-    margin-top: 10px;
-}
-
 .sub-box1 {
     background-color: #001d6e;
     width: 90%;
@@ -90,7 +90,8 @@ body {
     color: white;
     border-radius: 5px;
     padding: 15px;
-    margin-top: 10px;
+    margin: 25px 0 20px 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .sub-box1 p {
@@ -112,10 +113,32 @@ body {
     line-height: normal;
 }
 
+.sub-box2 {
+    background-color: #001d6e;
+    color: white;
+    width: 90%;
+    height: 105px;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0 20px 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
 .row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
+}
+
+.col {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.col:last-child {
+    margin-right: 0;
 }
 
 .row label {
@@ -129,6 +152,39 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+.pause-subox {
+    background-color: #fff;
+    width: 90%;
+    height: 65px;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.sub-box3 {
+    background-color: #001d6e;
+    width: 90%;
+    height: 129px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.mini-box {
+    display: inline-flex;
+    height: 59px;
+    padding: 11px 27px 12px 29px;
+    margin : 24px 29px 46px 34px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #FFF;
+}
+
+
 
 .btn {
     background-color: #0056b3;
