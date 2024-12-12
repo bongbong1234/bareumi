@@ -54,16 +54,18 @@ function App() {
           <Route path="/my-page" element={<MyPage/>}></Route>
           <Route path="/history"></Route>
           <Route path="/product" element={<Product/>}></Route>
-          <Route path='/login' element={<Login/>}></Route>
+          <Route path='/login' element={<Login setLogin={setLogin}/>}></Route>
           <Route path='/signup' element={<Signup  />}></Route>
           <Route path='/signup/validate-email' element={<ValidateEmail/>}></Route>
-          <button className='fix-btn' onClick={logout}>Logout</button>
         </Routes>
       </UserContext.Provider>
-
+      
        {
-        login &&  <Navigation></Navigation>
-       }
+        login &&  <>
+          <button className='fix-btn' onClick={logout}>Logout</button>
+          <Navigation></Navigation>
+        </>
+        }
     </div>
   );
 }
