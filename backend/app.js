@@ -8,9 +8,9 @@ const app = express();
 // router variable
 const userRouter = require("./routes/user.route")
 
-// auth
-
-const auth = require("./middleware/auth")
+// util
+const auth = require("./util/auth.js")
+const mail = require("./util/sendEmail.js");
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -43,6 +43,7 @@ app.use(session({
 app.use("/user",userRouter)
 
 app.use("/auth",auth);
+app.use("/mail",mail);
 
 app.listen(3001, () => {
   console.log("Express Server is Running!")

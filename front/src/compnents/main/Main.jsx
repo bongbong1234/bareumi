@@ -68,7 +68,7 @@ const Main = () => {
         };
 
   return (
-    <div className='main-container'>
+    <div className='container main-container'>
         <div className='stopwatch-box'>
             <div className='time'><span>{formatTime(hours)}</span> : <span>{formatTime(minutes)}</span> : <span>{formatTime(seconds)}</span></div>
             <div>

@@ -23,3 +23,12 @@
   height: 100vh;
 }
 
+.fix-btn {
+  padding: 10px;
+  position: fixed;
+  bottom: 70px; right: 450px;
+}
+
+.container {
+  height: calc(100% + 60px);
+}

@@ -29,9 +29,7 @@
     transform: scale(1.5);
     transition: 0.2s;
 }
-.main-container {
-    height: calc(100% + 60px);
-}
+
 .main-container .time {
     margin: 20px 0 0 60px;
     color: #000;

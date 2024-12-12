@@ -6,7 +6,7 @@ function MyPage() {
 
 
   return (
-    <div className="mypage-container">
+    <div className="container mypage-container">
       {/* 상단 탭 네비게이션 */}
       <div className="tabs">
         <button

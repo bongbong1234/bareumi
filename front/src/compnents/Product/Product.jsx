@@ -27,7 +27,7 @@ const products = [
 
 function Product() {
   return (
-    <div className="product-container">
+    <div className="container product-container">
       <h1>나의 상태에 맞는 제품</h1>
       <div className="product-list">
         {products.map((product) => (
