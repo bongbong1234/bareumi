@@ -34,3 +34,8 @@ exports.signup = async (req,res) => {
     const signUpChk = await userService.signup(id,pwd,name,email)
     console.log(signUpChk);
 }
+exports.logout = async (req,res) =>{
+    if (req.session.user){
+        req.session.user = null;
+    }
+}
