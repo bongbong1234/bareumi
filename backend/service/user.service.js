@@ -22,3 +22,13 @@ exports.signup = async (id,pwd,name,email) => {
         return false;
     }
 }
+
+exports.validate = async (value,id) => {
+    const validateUpdateChk = await userDao.validate(value,id);
+
+    if(validateUpdateChk) {
+        return true;
+    } else {
+        return false;
+    }
+}

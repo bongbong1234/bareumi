@@ -57,3 +57,21 @@ exports.signup = async (id,pwd,name,email) => {
         })
     })
 }
+
+exports.validate = async (value,id) => {
+    const sql = 'update tb_user set email_validate = ? where user_id = ?'
+    return new Promise ((resolve, reject) => {
+        conn.query(sql,[value,id], (err,rows) => {
+            if(err) {
+                console.log(err);
+                reject(false);
+            } else {
+                if(rows.affectedRows === 1) {
+                    resolve(true);
+                } else {
+                    resolve(false);
+                }
+            }
+        })
+    })
+}

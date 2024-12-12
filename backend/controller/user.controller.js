@@ -6,9 +6,14 @@ exports.login = async (req,res) => {
 
 
     if(user) {
-        req.session.user = user;
-        console.log("login-session:",req.session);
-        return res.status(201).json({messeage:"로그인 성공", item: user});
+
+        if(user.email_validate === 1) {
+            req.session.user = user;
+            return res.status(201).json({messeage:"로그인 성공", item: user});
+        } else {
+            return res.status(402).json({messeage:"이메일 인증 실패", item: user});
+        }
+        
     } else {
         return res.status(401).json({messeage: "UnAuthlized"});
     }
@@ -32,10 +37,30 @@ exports.signup = async (req,res) => {
     const {id,pwd,name,email} = req.body
     
     const signUpChk = await userService.signup(id,pwd,name,email)
+    if(signUpChk) {
+        res.status(201).json({messeage:"회원가입 성공!"})
+    } else {
+        res.status(401).json({message:"회원가입 실패"})
+    }
+}
+
+exports.logout = (req,res) => {
+    if (req.session.user) {
+        req.session.user = null;
+        console.log("로그아웃 : ",req.session)
+        return res.json({message:true});
+    }
+}
+
+exports.validate = async (req,res) => {
+    const {value,id} = req.body
+    const validateUpdateChk = userService.validate(value,id);
+    if(validateUpdateChk) {
+        res.status(201).json({message: true});
+    } else {
+        res.status(401).json({message: false});
+=======
     console.log(signUpChk);
 }
-exports.logout = async (req,res) =>{
-    if (req.session.user){
-        req.session.user = null;
     }
 }

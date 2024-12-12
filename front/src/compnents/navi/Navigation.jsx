@@ -9,16 +9,21 @@ import api from '../../config/api.config';
 const Navigation = () => {
 
     const nav = useNavigate();
-    const [select, setSelect] = useState('home')
+    const path = useLocation().pathname;
+    const [select, setSelect] = useState('')
     const naviRef = useRef();
 
   
     const sessionId = "session-id";
 
+    useEffect(()=> {
+        setSelect(sessionStorage.getItem("currentPath"));
+    },[])
+
     useEffect(() => {
         api.get("./auth/session-chk",{
             headers: {
-                Cookie: `session-id=${sessionId}`,
+               
             }
             })
             .then(res => {
@@ -27,10 +32,13 @@ const Navigation = () => {
                 } else if (select === "history") {
                     nav("../history");
                 } else if (select === "product") {
-                    nav("/product");
+                    nav("../product");
                 } else if (select === "mypage") {
-                    nav("/my-page");
+                    nav("../my-page");
                 }
+
+                sessionStorage.setItem("currentPath",select);
+                console.log(sessionStorage.getItem("currentPath"));
             }).catch(err => {
             console.error(err)
             nav("/login");
@@ -39,9 +47,9 @@ const Navigation = () => {
 
     const changeNavi = (e) => {
         const targetName = e.currentTarget.querySelector('p').innerText;
-        console.log(targetName);
         setSelect(targetName.toLowerCase());
     }
+
 
   return (
     <div className='navi-container'>

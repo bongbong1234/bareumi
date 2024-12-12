@@ -1,8 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
+
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import api from '../../config/api.config';
+import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../../context/UserContext';
 import './Signup.css';
 
 const Signup = () => {
+  const {setNewId, setValidateEmail} = useContext(UserContext);
+  const nav = useNavigate();
+
   const idRef = useRef('');
   const pwRef = useRef('');
   const nameRef = useRef('');
@@ -10,17 +16,20 @@ const Signup = () => {
   const emailIdRef = useRef('');
   const emaillAddressRef = useRef('');
 
-  const [idDuplicate, setIdDuplicate] = useState(false);
-  const [pwValidate, setPwValidate] = useState(false);
-  const [pwCurrect, setPwCurrect] = useState();
+  
+  const [email,setEmail] = useState('');
+  const [idDuplicate,setIdDuplicate] = useState(false);
+  const [pwValidate,setPwValidate] = useState(false);
+  const [pwCurrect,setPwCurrect] = useState();
   const [emailChk, setEmailChk] = useState(false);
-  const [email, setEmail] = useState('');
 
-  useEffect(() => {
-    let email = emailIdRef.current.value + '@' + emaillAddressRef.current.value;
-
+  useEffect(()=> {
+    let email = emailIdRef.current.value + "@" + emaillAddressRef.current.value;
+    console.log(email);
     if (emailChk) {
       setEmail(email);
+      setValidateEmail(email);
+      console.log(email);
     } else {
       setEmail(null);
     }
@@ -49,9 +58,9 @@ const Signup = () => {
   };
 
   const signUp = () => {
-    const idVal = idRef.current.value;
-    const pwVal = pwRef.current.value;
-    const nameVal = nameRef.current.value;
+    let idVal = idRef.current.value;
+    let pwVal = pwRef.current.value;
+    let nameVal = nameRef.current.value;
 
     if (idVal === '') {
       alert('아이디를 입력하세요');
@@ -76,8 +85,30 @@ const Signup = () => {
         id: idVal,
         pwd: pwVal,
         name: nameVal,
-        email: email,
-      });
+        email: email
+      }).then(res => {
+        if(res.status === 201){
+
+          nav('./validate-email');
+
+          idRef.current.value = '';
+          pwRef.current.value = '';
+          pwChkRef.current.value = '';
+          nameRef.current.value = '';
+          emailIdRef.current.value = '';
+          emaillAddressRef.current.value = '';
+
+          setIdDuplicate(false);
+          setPwValidate(false);
+          setPwCurrect(false);
+          setEmailChk(false);
+
+          setNewId(idVal);
+
+        }
+      }).catch(err => {
+        console.error(err);
+      })
     }
   };
 
@@ -140,15 +171,14 @@ const Signup = () => {
           placeholder="이메일 아이디를 입력해주세요"
         />
         @
-        <input
-          type="text"
-          ref={emaillAddressRef}
-          placeholder="이메일 주소를 입력해주세요"
-          onChange={(e) => {
-            const tldRegex = /\.(com|net|kr)$/i;
-            setEmailChk(tldRegex.test(e.target.value));
-          }}
-        />
+        <input type='text' ref={emaillAddressRef} placeholder='이메일 주소를 입력해주세요' onChange={e => {
+          const tldRegex = /\.(com|net|kr)$/i;
+          if(tldRegex.test(e.target.value)){
+            setEmailChk(true);
+          } else {
+            setEmailChk(false);
+          }
+        }}/>
       </div>
 
       <button className="btn-submit" onClick={signUp}>
