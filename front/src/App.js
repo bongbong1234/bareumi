@@ -5,7 +5,7 @@ import Main from './compnents/main/Main';
 import MyPage from './compnents/mypage/MyPage';
 import Product from './compnents/Product/Product';
 import Login from './compnents/login/Login';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import api from './config/api.config';
 import Signup from './compnents/signup/Signup';
 
@@ -14,6 +14,8 @@ function App() {
   const nav = useNavigate();
   const sessionId = "session-id";
 
+  const [login,setLogin] = useState(false);
+
   useEffect(()=> {
      api.get("./auth/session-chk",{
       headers: {
@@ -21,8 +23,8 @@ function App() {
       }
      })
      .then(res => {
-        if(!res.data.item) {
-        }
+        sessionStorage.setItem("sessionUser",JSON.stringify(res.data.item));
+        setLogin(true);
      }).catch(err => {
       console.error(err)
       nav("/login");
@@ -39,10 +41,12 @@ function App() {
           <Route path="/my-page" element={<MyPage/>}></Route>
           <Route path="/history"></Route>
           <Route path="/product" element={<Product/>}></Route>
-          <Route path='/login' element={<Login/>}></Route>
+          <Route path='/login'  element={<Login setLogin = {setLogin}/>}></Route>
           <Route path='/signup' element={<Signup/>}></Route>
         </Routes>
-        <Navigation></Navigation>
+       {
+        login &&  <Navigation></Navigation>
+       }
     </div>
   );
 }
