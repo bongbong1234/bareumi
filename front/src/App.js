@@ -18,6 +18,8 @@ function App() {
   const [validateEmail, setValidateEmail] = useState('');
   const sessionId = "session-id";
 
+  const [login,setLogin] = useState(false);
+
   useEffect(()=> {
      api.get("./auth/session-chk",{
       headers: {
@@ -25,6 +27,8 @@ function App() {
       }
      })
      .then(res => {
+        sessionStorage.setItem("sessionUser",JSON.stringify(res.data.item));
+        setLogin(true);
      }).catch(err => {
       console.error(err)
       nav("/login");
@@ -53,10 +57,13 @@ function App() {
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/signup' element={<Signup  />}></Route>
           <Route path='/signup/validate-email' element={<ValidateEmail/>}></Route>
+          <button className='fix-btn' onClick={logout}>Logout</button>
         </Routes>
-        <button className='fix-btn' onClick={logout}>Logout</button>
-        <Navigation></Navigation>
       </UserContext.Provider>
+
+       {
+        login &&  <Navigation></Navigation>
+       }
     </div>
   );
 }

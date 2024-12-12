@@ -12,7 +12,7 @@
   -ms-overflow-style: none;
 } ::-webkit-scrollbar {
   display: none;
-}
+} 
 .mobile-container {
   background-color: #f2f2f2;
   overflow-x: hidden;

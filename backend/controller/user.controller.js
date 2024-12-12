@@ -59,5 +59,8 @@ exports.validate = async (req,res) => {
         res.status(201).json({message: true});
     } else {
         res.status(401).json({message: false});
+=======
+    console.log(signUpChk);
+}
     }
 }
