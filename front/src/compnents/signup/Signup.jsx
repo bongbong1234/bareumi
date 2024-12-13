@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react'
 import api from '../../config/api.config';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
-import './Signup.css';
+import './signup.css';
 
 const Signup = () => {
   const {setNewId, setValidateEmail} = useContext(UserContext);
@@ -34,6 +34,10 @@ const Signup = () => {
       setEmail(null);
     }
   }, [emailChk]);
+
+  const toBack = () => {
+    nav(-1);
+  }
 
   const duplicate = () => {
     const idVal = idRef.current.value;
@@ -163,15 +167,15 @@ const Signup = () => {
         <input type="text" placeholder="이름을 입력해주세요" ref={nameRef} />
       </div>
 
-      <div className="signup-field">
+      <div className="email-field">
         <label>이메일</label>
         <input
           type="text"
           ref={emailIdRef}
-          placeholder="이메일 아이디를 입력해주세요"
+          placeholder="아이디"
         />
-        @
-        <input type='text' ref={emaillAddressRef} placeholder='이메일 주소를 입력해주세요' onChange={e => {
+        <span>@</span>
+        <input type='text' ref={emaillAddressRef} placeholder='이메일 주소' onChange={e => {
           const tldRegex = /\.(com|net|kr)$/i;
           if(tldRegex.test(e.target.value)){
             setEmailChk(true);
@@ -181,9 +185,12 @@ const Signup = () => {
         }}/>
       </div>
 
-      <button className="btn-submit" onClick={signUp}>
-        회원가입하기
-      </button>
+      <div>
+        <button className="btn-submit" onClick={signUp}>
+          회원가입하기
+        </button>
+        <div className='btn-toback' onClick={toBack}>돌아가기</div>
+      </div>
     </div>
   );
 };

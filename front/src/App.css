@@ -7,12 +7,18 @@
 
 *{
   margin: 0; padding: 0;
-  font-family: 'Noto Sans KR' sans-serif;
+  font-family: "Noto Sans KR" sans-serif;
   text-decoration: none;
   -ms-overflow-style: none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+
 } ::-webkit-scrollbar {
   display: none;
 } 
+
 .mobile-container {
   background-color: #f2f2f2;
   overflow-x: hidden;
@@ -23,12 +29,27 @@
   height: 100vh;
 }
 
+.mobile-container div {
+  animation: fade-in 0.5s;
+}
+
 .fix-btn {
   padding: 10px;
   position: fixed;
-  bottom: 70px; right: 310px;
+  bottom: 70px; left: calc(100% - 840px)
 }
 
 .container {
-  margin-bottom: 160px;
+ margin-bottom: 100px;
 }
+
+
+/*Animations*/
+@keyframes fade-in {
+  from{
+      opacity: 0;
+  } to {
+      opacity: 1;
+  }
+}
+/*Animations*/

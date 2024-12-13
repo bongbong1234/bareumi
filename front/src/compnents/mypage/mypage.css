@@ -313,7 +313,7 @@
 
 .pause-box {
     background-color: #001d6e;
-    margin-top: 10px;
+    margin-top: 10px; margin-bottom: 20px;
     padding: 25px;
     overflow: hidden;
     border-radius: 5px;

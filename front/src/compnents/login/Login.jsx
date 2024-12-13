@@ -2,7 +2,7 @@ import React, { useContext, useRef } from 'react'
 import axios from 'axios';
 import api from '../../config/api.config';
 import { useNavigate } from 'react-router-dom';
-import './Login.css'
+import './login.css'
 import { UserContext } from '../../context/UserContext';
 
 const Login = ({setLogin}) => {
@@ -13,8 +13,6 @@ const Login = ({setLogin}) => {
 
     const idRef = useRef();
     const pwRef = useRef();
-
-  const navigate = useNavigate();
 
     const handleKeyLogin = (e) => {
       if (e.key === "Enter") {
@@ -32,8 +30,8 @@ const Login = ({setLogin}) => {
       }).then(res => {
         if (res.status === 201) {
           setLogin(true);
-          console.log(res.data.item);
-          navigate('../')
+          sessionStorage.setItem("currentPath","home");
+          nav('../')
         }
       }).catch(err => {
         console.error(err)
@@ -62,7 +60,7 @@ const Login = ({setLogin}) => {
   }
 
   const toSignUp = () => {
-    navigate("../signup")
+    nav("../signup")
   }
 
   return (

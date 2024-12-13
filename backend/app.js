@@ -13,9 +13,6 @@ const auth = require("./util/auth.js")
 const mail = require("./util/sendEmail.js");
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'html');
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
