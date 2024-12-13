@@ -37,12 +37,20 @@ const Login = ({setLogin}) => {
         }
       }).catch(err => {
         console.error(err)
-        idRef.current.value = '';
-        pwRef.current.value = '';
 
-        alert("ID 혹은 비밀번호를 확인해주세요!");
 
-        idRef.current.focus();
+        if(err.status === 401) {
+          alert("아이디 혹은 비밀번호를 확인해주세요");
+          idRef.current.value = '';
+          pwRef.current.value = '';
+        } else if (err.status === 402) {
+          const errResponsData = err.response.data;
+          alert("이메일을 인증해주세요!");
+          setNewId(errResponsData.item.user_id);
+          setValidateEmail(errResponsData.item.user_email);
+          nav("../signup/validate-email");
+        }
+        
       })
     } else if (!idVal) {
       alert("아이디를 입력해주세요!");

@@ -30,5 +30,5 @@
 }
 
 .container {
-  height: calc(100% + 60px);
+  margin-bottom: 160px;
 }
