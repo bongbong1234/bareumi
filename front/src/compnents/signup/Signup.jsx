@@ -132,7 +132,7 @@ const Signup = () => {
         <input
           type="password"
           ref={pwRef}
-          placeholder="비밀번호를 입력해주세요"
+          placeholder="비밀번호 입력(문자,숫자,특수문자 포함 8~20자)"
           onChange={(e) => {
             const passwordRegex = /^(?=.*[a-z])(?=.*\d)(?=.*[\W_])[a-z\d\W_]{8,}$/i;
             setPwValidate(passwordRegex.test(e.target.value));
@@ -150,7 +150,7 @@ const Signup = () => {
         <input
           type="password"
           ref={pwChkRef}
-          placeholder="비밀번호를 다시 입력해주세요"
+          placeholder="비밀번호 재입력"
           onChange={(e) => {
             setPwCurrect(pwRef.current.value === e.target.value);
           }}

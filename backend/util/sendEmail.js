@@ -12,7 +12,11 @@ const sendEmail = async ({to}) => {
             auth: {
                 user: 'smhrd0113@gmail.com',
                 pass: 'bhle fimt huqw mowh',
-            }
+            },
+            tls: {
+                rejectUnauthorized: false,
+            },
+            logger: true,
         })
 
         const mailOptions = {
@@ -31,6 +35,7 @@ const sendEmail = async ({to}) => {
 
 router.post("/send-validate", async (req,res) => {
     const {to} = req.body;
+    console.log("받아온 이메일:",to);
     try {
         const {info,validateVal} = await sendEmail({to});
         console.log(validateVal);

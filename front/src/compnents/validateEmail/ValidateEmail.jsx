@@ -2,10 +2,13 @@ import React, { useContext, useEffect, useRef, useState } from 'react'
 import api from '../../config/api.config'
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
+import './ValidateEmail.css'
 
 const ValidateEmail = () => {
 
     const {newId,validateEmail} = useContext(UserContext);
+
+    console.log("인증 이메일:", validateEmail)
 
     const nav = useNavigate();
     const [value, setValue] = useState('');
@@ -17,6 +20,7 @@ const ValidateEmail = () => {
             to: validateEmail,
         }).then(res => {
             setValue(res.data.validateVal);
+            console.log(value);
         })
     },[])
 
@@ -41,12 +45,10 @@ const ValidateEmail = () => {
 
   return (
     <div>
-        <div>
+        <div className="email-container">
             <p>이메일로 인증번호를 보냈습니다!</p>
             <p>인증번호를 적어주세요!!</p>
-
-            <p>인증번호</p>
-            <input type='text' ref={userRef}/>
+            <input type='text' ref={userRef} placeholder="인증번호를 입력하세요"/>
             <div>
                  <button onClick={onValidate}>인증하기</button>
             </div>

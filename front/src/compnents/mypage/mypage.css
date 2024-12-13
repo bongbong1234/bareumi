@@ -1,7 +1,8 @@
 .mypage-container {
     width: 90%;
     max-width: 600px;
-    margin: 20px auto; margin-bottom: 60px;
+    margin: 20px auto;
+    margin-bottom: 100px;
     padding: 10px;
     background-color: #f2f2f2;
     border-radius: 10px;
@@ -43,7 +44,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 30px 0 25px 0 ;
+    margin: 30px 0 25px 0;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 5px;
@@ -71,10 +72,11 @@
 .vibration-bar-fill {
     position: absolute;
     height: 100%;
-    background-color: #001d6e; /* 활성화된 상태 색상 */
+    background-color: #001d6e;
+    /* 활성화된 상태 색상 */
     border-radius: 5px;
     transition: width 0.3s ease;
-  }
+}
 
 .button-container {
     display: flex;
@@ -99,7 +101,7 @@
 
 .alert-box {
     background-color: #f9f9f9;
-    height: 600px;
+    height: 650px;
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
@@ -107,7 +109,7 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.sub-box1 {
+.alert-avg {
     background-color: #001d6e;
     width: 90%;
     height: 65px;
@@ -118,7 +120,7 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.sub-box1 p {
+.alert-avg p {
     color: #FFF;
     text-align: center;
     font-size: 20px;
@@ -127,7 +129,7 @@
     line-height: normal;
 }
 
-.sub-box1 p>span {
+.alert-avg p>span {
     color: #FFF;
     text-align: center;
     font-family: "Noto Sans KR";
@@ -142,77 +144,172 @@
     background-color: #001d6e;
     border-radius: 5px;
     padding: 20px 0px 20px 30px;
-    width : 90%;
+    width: 90%;
     color: #ffffff;
-    margin: 20px 0 20px 0;
+    margin: 10px 0 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-  }
+}
 
-  .alert-enhancement h4 {
+.alert-enhancement h4 {
     margin-bottom: 20px;
     font-size: 18px;
     color: #ffffff;
-  }
-  
-  .alert-content {
+}
+
+.alert-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-  }
-  
-  .alert-time,
-  .alert-vibration {
+}
+
+.alert-time,
+.alert-vibration {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #ffffff;
     color: #000;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 15px;
-    width: 60%; /* 두 섹션을 나란히 배치 */
+    width: 60%;
+    /* 두 섹션을 나란히 배치 */
     max-width: 200px;
     box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
-  }
+}
 
-  .alert-vibration-wrapper{
-    display:flex;
-    flex-direction: column; /* 세로 정렬*/
-    align-items : center;
+.alert-vibration-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* 세로 정렬*/
+    align-items: center;
     width: 40%;
-  }
-  
-  .alert-time label,
-  .alert-vibration label {
+}
+
+.alert-time label,
+.alert-vibration label {
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 5px;
-  }
-  
-  .alert-time p,
-  .alert-vibration p {
+}
+
+.alert-time p,
+.alert-vibration p {
     font-size: 20px;
     font-weight: bold;
-  }
-  
-  .settings-change {
-    margin-top: 10px;
-    width : 60%;
-    background-color: #b3edff;
+}
+
+.alert-setting {
+    margin-top: 15px;
+    width: 60%;
+    background-color: #c4ddff;
     color: #000;
     text-align: center;
     border-radius: 20px;
-    padding: 10px 0;
+    padding: 5px 0;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .settings-change:hover {
+}
+
+.alert-setting:hover {
     background-color: #f2f2f2;
-    color : #000;
-  }
+    color: #000;
+}
+
+.mini-box {
+    background-color: #001d6e;
+    width: 90%;
+    height: 160px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 15px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.mini-time {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 10px 30px;
+    margin: 20px 20px 10px;
+    border-radius: 5px;
+    background-color: #FFF;
+}
+
+.check-time {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wear-time,
+.alert-count {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.alert-count {
+    margin-left: 30px;
+    /* 간격 추가 */
+}
+
+.mini-time p {
+    font-size: 14px;
+}
+
+.mini-time p>span {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.min-setting {
+    background-color: #c4ddff;
+    width: 22%;
+    margin: 15px 0 0 330px;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.min-setting:hover {
+    background-color: #f2f2f2;
+}
+
+.reset-button {
+    background-color : #c4ddff;
+    color : black; 
+    border-radius: 20px;
+    width : 20%;
+    font-weight: bold;
+    text-align : center;
+    margin-top : 25px;
+    margin-left : 380px;
+    padding : 3px 0;
+    cursor : pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.reset-button:hover{
+    background-color: #001d6e;
+    color : white;
+}
 
 .pause-box {
     background-color: #001d6e;
@@ -221,105 +318,53 @@
     overflow: hidden;
     border-radius: 5px;
     width: 90%;
-    height: 150px;
+    height: 170px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-
-
-.box h2 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
+.pause-box h3{
+    color:white;
+    font-size : 14px;
+    margin-left : 5px;
 }
 
-
-
-.sub-box2 {
-    background-color: #001d6e;
-    color: white;
-    width: 90%;
-    height: 105px;
-    border-radius: 5px;
-    padding: 15px;
-    margin: 10px 0 20px 0;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.col {
-    flex: 1;
-    margin-right: 10px;
-}
-
-.col:last-child {
-    margin-right: 0;
-}
-
-.row label {
-    flex: 1;
-    margin-right: 10px;
-}
-
-.row input {
-    flex: 2;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.pause-subox {
+.pause-time {
     background-color: #fff;
     width: 90%;
     height: 65px;
     border-radius: 5px;
-    padding: 15px;
-    margin-top: 10px;
+    padding: 20px;
+    margin: 5px 0 0 5px;
+    display : flex;
+    justify-content : center;
+    align-items : center
 }
 
-.sub-box3 {
-    background-color: #001d6e;
-    width: 90%;
-    height: 129px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    padding: 15px;
-    margin-top: 10px;
+.pause-time span{
+    text-align: center;
+    font-weight : bold;
+    font-size : 28px;
+    line-height : normal;
 }
 
-.mini-box {
-    display: inline-flex;
-    height: 59px;
-    padding: 11px 27px 12px 29px;
-    margin: 24px 29px 46px 34px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    border-radius: 5px;
-    background: #FFF;
+.pause-setting {
+    background-color : #c4ddff;
+    color : black; 
+    border-radius: 20px;
+    width : 20%;
+    font-weight: bold;
+    font-size : 14px;
+    text-align : center;
+    margin-top : 16px;
+    margin-left : 380px;
+    padding : 5px 0;
+    cursor : pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
-
-.btn {
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 14px;
+.pause-setting:hover{
+    background-color : #f2f2f2;
 }
 
-.btn:hover {
-    background-color: #003d8b;
-}
 
 .userinfo {
     display: flex;
@@ -332,6 +377,7 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
+/* 이미지 css */
 .circle {
     background-color: #f2f2f2;
     border-radius: 50%;
@@ -346,7 +392,6 @@
 }
 
 .profile-details h3 {
-    font-family: "Noto Sans KR";
     margin-left: 60%;
     font-size: 20px;
 }
@@ -373,7 +418,8 @@
 }
 
 .settings-item:hover {
-    background-color: #f2f2f2;
+    transform : scale(1.03);
+    transition : transform 0.1s ease ;
     /* hover 시 배경색 변경 */
 }
 
