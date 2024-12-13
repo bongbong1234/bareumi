@@ -28,7 +28,7 @@ const products = [
 function Product() {
   return (
     <div className="container product-container">
-      <h1>나의 상태에 맞는 제품</h1>
+      <h1>나만의 맞춤 제품</h1>
       <div className="product-list">
         {products.map((product) => (
           <div key={product.id} className="product-card">
