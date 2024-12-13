@@ -1,0 +1,64 @@
+.history-container button {
+    border: 0;
+    background-color: #f2f2f2;
+}
+
+.history-container button:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+    transition: 0.2s;
+}
+.history-container .time {
+    position: absolute;
+    top: 130px; left: 614px;
+    font-size: 32px; font-weight: 700;
+}
+.history-container .fa-icon {
+    margin: 0 20px;
+}
+.history-container .stopwatch-box button:first-child {
+    margin-left: 195px; margin-top: 20px;
+}
+.history-container .fa-icon.fa-play {
+    width: 30px; height: 30px;
+}
+.history-container .fa-icon.fa-pause {
+    width: 30px; height: 30px;
+}
+.history-container .fa-icon.fa-stop {
+    width: 30px; height: 30px;
+    color: #CE0018;
+}
+
+.history-log {
+    overflow: auto;
+    margin-top: 20px;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.history-log table {
+    margin-left: 70px;
+    border-spacing: 0.5px;
+    background-color: #fff;
+}
+
+.history-log table thead {
+    background-color: #001d6e;
+    color: white;
+}
+
+.history-log table th {
+    padding: 10px;
+    width: 80px;
+}
+
+.history-log table th:last-child {
+    width: 150px;
+}
+
+.history-log table tbody td {
+    padding: 10px;
+    font-weight: 700;
+    text-align: center;
+}

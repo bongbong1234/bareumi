@@ -10,6 +10,8 @@ import api from './config/api.config';
 import Signup from './compnents/signup/Signup';
 import ValidateEmail from './compnents/validateEmail/ValidateEmail';
 import { UserContext } from './context/UserContext';
+import History from './compnents/history/History';
+import { useStopwatch } from 'react-timer-hook';
 
 function App() {
 
@@ -19,6 +21,9 @@ function App() {
   const sessionId = "session-id";
 
   const [login,setLogin] = useState(false);
+
+
+  const {seconds, minutes, hours, start, pause, reset} = useStopwatch({autoStart : false});
 
   useEffect(()=> {
      api.get("./auth/session-chk",{
@@ -48,15 +53,25 @@ function App() {
   
   return (
     <div className="mobile-container">
-      <UserContext.Provider value ={{newId,validateEmail,setNewId,setValidateEmail}}>
+      <UserContext.Provider value ={{newId,
+        validateEmail,
+        setNewId,
+        setValidateEmail,
+        seconds, 
+        minutes, 
+        hours, 
+        start, 
+        pause, 
+        reset}}>
         <Routes>
           <Route path="/" element={<Main/>}></Route>
           <Route path="/my-page" element={<MyPage/>}></Route>
-          <Route path="/history"></Route>
+          <Route path="/history" element={<History/>} ></Route>
           <Route path="/product" element={<Product/>}></Route>
           <Route path='/login' element={<Login setLogin={setLogin}/>}></Route>
           <Route path='/signup' element={<Signup  />}></Route>
           <Route path='/signup/validate-email' element={<ValidateEmail/>}></Route>
+          <Route path='/pw-chk/:path'></Route>
         </Routes>
       </UserContext.Provider>
       

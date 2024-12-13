@@ -1,30 +1,18 @@
 /*스탑워치*/
-.main-container {
-    animation: fade-in 0.5s;
-}
-
-@keyframes fade-in {
-    from{
-        opacity: 0;
-    } to {
-        opacity: 1;
-    }
-}
-
-.stopwatch-box {
+.main-container .stopwatch-box {
     margin: 20px 0 0 25px;
     width: 90%; height: 70px;
     border-radius: 5px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background-color: #fff;
 }
-.stopwatch-box div {
+.main-container .stopwatch-box div {
     display: inline-block;
 }
-.stopwatch-box button {
+.main-container  .stopwatch-box button {
     border: none; background-color: #fff;
 }
-.stopwatch-box button:hover {
+.main-container .stopwatch-box button:hover {
     cursor: pointer;
     transform: scale(1.5);
     transition: 0.2s;
@@ -47,16 +35,16 @@
 .main-container .chart {
     background-color: white;
 }
-.stopwatch-box button:first-child {
+.main-container .stopwatch-box button:first-child {
     margin-left: 50px;
 }
-.fa-icon.fa-play {
+.main-container .fa-icon.fa-play {
     width: 20px; height: 20px;
 }
-.fa-icon.fa-pause {
+.main-container .fa-icon.fa-pause {
     width: 20px; height: 20px;
 }
-.fa-icon.fa-stop {
+.main-container .fa-icon.fa-stop {
     width: 20px; height: 20px;
     color: #CE0018;
 }
@@ -171,15 +159,15 @@
     color: white; border-radius: 5px;
 }
 .danger_num > p {
-    margin-left: 25px; padding-top: 15px;
-    font-size: 20px;
+    margin-left: 35px; padding-top: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 .danger_num span {
     margin-left: 10px;
-    font-size: 32px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 700;
     line-height: 144.807%;
@@ -217,3 +205,145 @@
     width: 200px;
 }
 /*분석*/
+
+/*주간 분석*/
+.week-container {
+    margin:45px 0 0 25px;
+}
+.week-container > p {
+    font-family: "Noto Sans KR";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.week-container .chart-box {
+    overflow: hidden;
+    margin-top: 10px;
+    width: 94%;
+    background-color: #001D6E;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    height: 300px;
+}
+.week-container .chart {
+    overflow: hidden;
+    border-radius: 2px;
+    margin:15px auto;
+    width: 500px;
+}
+/*주간 분석*/
+
+/*착용시간 분석*/
+    .totalwear-container {
+        margin:45px 0 0 25px;
+    }
+    .totalwear-container > p {
+        font-family: "Noto Sans KR";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    
+    .totalwear-container .contents {
+        margin-top: 10px;
+        background-color: #fff;
+        width: calc(94% - 40px);
+        padding: 40px 30px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    .totalwear-container .total-sub {
+        background-color: #001D6E;
+        color: #fff;
+        padding: 20px 50px;
+        border-radius: 10px;
+    }
+    .totalwear-container .total-sub p{
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .totalwear-container .total-sub p:last-child {
+        margin-left: 50px;
+    }
+    .totalwear-container .total-sub p > span {
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    .totalwear-container .content {
+        margin-left: 45px; margin-top: 30px;
+        display: flex;
+    }
+
+    .totalwear-container .wear-time {
+        margin-top: 25px;
+    }
+
+    .totalwear-container .wear-time p {
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+    }
+    .totalwear-container .wear-time div:last-child {
+        margin-top: 50px;
+    }
+    .totalwear-container .wear-time p:last-child {
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    .totalwear-container .chart {
+        overflow: hidden;
+        background-color: #001D6E;
+        margin-left: 50px;
+        width: 200px;
+        height: 250px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .totalwear-container .chart > div {
+        margin: 15px 10px;
+        width: 90%;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    .totalwear-container .apexcharts-legend {
+        top : 180px !important; 
+    }
+/*착용시간 분석*/
+
+/*시간별 틀어짐*/
+    .twist-analysis-container {
+        margin:45px 0 0 25px;
+    }
+
+    .twist-analysis-container p {
+        font-family: "Noto Sans KR";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .twist-analysis-container .twist-time {
+        overflow: hidden;
+        margin-top: 10px;
+        width: 94%; height: 400px;
+        background-color: #001D6E;
+        border-radius: 5px;
+    }
+
+    .twist-analysis-container .twist-time > div {
+        margin: 20px 12px;
+        background-color: #fff;
+        width: 95%;
+        border-radius: 5px;
+    }
+/*시간별 틀어짐*/
+

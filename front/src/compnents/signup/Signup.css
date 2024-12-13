@@ -1,13 +1,8 @@
 /* Signup.css */
 
-body {
-    background-color: #f2f2f2;
-    font-family: "Noto Sans KR";
-  }
-  
   .signup-container {
     max-width: 400px;
-    margin: 50px auto;
+    margin: 23% auto;
     background: #fff;
     border-radius: 8px;
     padding: 20px;
@@ -40,7 +35,7 @@ body {
   }
   
   .signup-field input {
-    width: calc(100% - 10px);
+    width: 95%;
     padding: 8px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -48,6 +43,39 @@ body {
   }
   
   .signup-field input:focus {
+    border-color: #001d6e;
+    outline: none;
+  }
+
+  .email-field {
+    margin-bottom: 15px;
+  }
+  
+  .email-field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .email-field input {
+    width: 40%;
+    padding: 9px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .email-field input:last-child{
+    width: 43%;
+  }
+  
+  .email-field span {
+    font-size: 16px;
+    margin: 0 6px;
+  }
+  
+  .email-field input:focus {
     border-color: #001d6e;
     outline: none;
   }
@@ -80,6 +108,7 @@ body {
   
   .btn-submit {
     width: 100%;
+    margin: 20px 0 ;
     background-color: #001d6e;
     color: #fff;
     border: none;
@@ -93,3 +122,18 @@ body {
     background-color: #003399;
   }
   
+  .btn-toback {
+    width: 20%;
+    margin-top: 10px; margin-left: 290px;
+    background-color: #001d6e;
+    text-align: center;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+
+  .btn-toback:hover {
+    background-color: #003399;
+  }

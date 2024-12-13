@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import "./mypage.css";
+import { useNavigate } from "react-router-dom";
 
 function MyPage() {
   const [vibLevel, setVibLevel] = useState(1);
   const [activeTab, setActiveTab] = useState("alertSettings");
 
   // 설정 변경 버튼
+
+  const nav = useNavigate();
 
   const SettingChange = () => {
     console.log("설정변경 클릭!")
@@ -20,6 +23,12 @@ function MyPage() {
   const decreaseVib = () => {
     if (vibLevel > 1) {
       setVibLevel(vibLevel - 1);
+    }
+  }
+
+  const toPwChk = (path) => {
+    if(path == 'update') {
+      nav(`/pw-chk/${path}`); 
     }
   }
 
@@ -135,7 +144,7 @@ function MyPage() {
             {/* 사용자 설정 섹션 */}
             <div className="user-settings">
               <h4>사용자 설정</h4>
-              <div className="settings-item" onClick={() => console.log("정보 수정 클릭됨!")}>
+              <div className="settings-item" onClick={() => toPwChk('update')}>
                 <span>정보 수정</span>
                 <span className="arrow">&gt;</span>
               </div>
