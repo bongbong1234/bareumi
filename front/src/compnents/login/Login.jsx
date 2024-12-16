@@ -30,6 +30,7 @@ const Login = ({setLogin}) => {
       }).then(res => {
         if (res.status === 201) {
           setLogin(true);
+          sessionStorage.setItem("sessionUser",JSON.stringify(res.data.item));
           sessionStorage.setItem("currentPath","home");
           nav('../')
         }

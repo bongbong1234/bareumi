@@ -54,10 +54,23 @@ exports.logout = (req,res) => {
 
 exports.validate = async (req,res) => {
     const {value,id} = req.body
-    const validateUpdateChk = userService.validate(value,id);
+    const validateUpdateChk = await userService.validate(value,id);
     if(validateUpdateChk) {
         res.status(201).json({message: true});
     } else {
         res.status(401).json({message: false});
+    }
+}
+
+exports.pwdChk = async (req,res) => {
+    const {id,pwd} = req.body
+    const pwdChk = await userService.pwdChk(id,pwd);
+
+    console.log(pwdChk)
+
+    if(pwdChk) {
+        res.status(201).json({message:true})
+    } else {
+        res.status(401).json({message: false})
     }
 }

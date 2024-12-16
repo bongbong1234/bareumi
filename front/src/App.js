@@ -12,6 +12,8 @@ import ValidateEmail from './compnents/validateEmail/ValidateEmail';
 import { UserContext } from './context/UserContext';
 import History from './compnents/history/History';
 import { useStopwatch } from 'react-timer-hook';
+import UpDate from './compnents/update/UpDate';
+import PwChange from './compnents/update/PwChange';
 
 function App() {
 
@@ -71,7 +73,7 @@ function App() {
           <Route path='/login' element={<Login setLogin={setLogin}/>}></Route>
           <Route path='/signup' element={<Signup  />}></Route>
           <Route path='/signup/validate-email' element={<ValidateEmail/>}></Route>
-          <Route path='/pw-chk/:path'></Route>
+          <Route path='/pw-chk/:path' element={<UpDate/>}></Route>
         </Routes>
       </UserContext.Provider>
       
