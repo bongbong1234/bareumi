@@ -9,8 +9,8 @@
     transition: 0.2s;
 }
 .history-container .time {
-    position: absolute;
-    top: 130px; left: 614px;
+    position: relative;
+    top: -175px; left: 36.5%;
     font-size: 32px; font-weight: 700;
 }
 .history-container .fa-icon {

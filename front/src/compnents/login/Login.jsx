@@ -16,11 +16,13 @@ const Login = ({setLogin}) => {
 
     const handleKeyLogin = (e) => {
       if (e.key === "Enter") {
+        console.log("누름")
         login();
       }
     }
 
   const login = () => {
+    console.log("로그인 누름");
     let idVal = idRef.current.value;
     let pwVal = pwRef.current.value;
     if (idVal && pwVal) {
@@ -30,6 +32,7 @@ const Login = ({setLogin}) => {
       }).then(res => {
         if (res.status === 201) {
           setLogin(true);
+          sessionStorage.setItem("sessionUser",JSON.stringify(res.data.item));
           sessionStorage.setItem("currentPath","home");
           nav('../')
         }
