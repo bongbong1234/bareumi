@@ -16,11 +16,13 @@ const Login = ({setLogin}) => {
 
     const handleKeyLogin = (e) => {
       if (e.key === "Enter") {
+        console.log("누름")
         login();
       }
     }
 
   const login = () => {
+    console.log("로그인 누름");
     let idVal = idRef.current.value;
     let pwVal = pwRef.current.value;
     if (idVal && pwVal) {

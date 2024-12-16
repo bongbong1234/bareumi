@@ -7,6 +7,7 @@ import {} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ApexChart from 'react-apexcharts';
 import { UserContext } from '../../context/UserContext';
+import flask from '../../config/flask.config';
 
 const Main = () => {
 
@@ -20,18 +21,14 @@ const Main = () => {
     const [totalHour, setTotalHour] = useState(10);
     const [totalAlert,setTotalAlert] = useState(5);
 
-     const {seconds, minutes, hours, start, pause, reset} = useContext(UserContext);
+    const {seconds, minutes, hours, onSensorStart, onSensorPause, onSensorStop} = useContext(UserContext);
     
-    const stopRecord = () => {
-        pause()
-        reset(0,false);
-    }
 
     const formatTime = (value) => {
         return String(value).padStart(2, '0'); // 한 자리 숫자 앞에 0 추가
       };
 
-
+    
 
     const minHourOptions = {
     series: [(baseTime-hours),hours],
@@ -248,13 +245,13 @@ const Main = () => {
         <div className='stopwatch-box'>
             <div className='time'><span>{formatTime(hours)}</span> : <span>{formatTime(minutes)}</span> : <span>{formatTime(seconds)}</span></div>
             <div>
-                <button onClick={start}>
+                <button onClick={onSensorStart}>
                     <FontAwesomeIcon className='fa-icon' icon={faPlay} />
                 </button>
-                <button onClick={pause}>
+                <button onClick={onSensorPause}>
                     <FontAwesomeIcon className='fa-icon' icon={faPause} />
                 </button>
-                <button onClick={stopRecord}>
+                <button onClick={onSensorStop}>
                     <FontAwesomeIcon className='fa-icon' icon={faStop} />
                 </button>
             </div>
