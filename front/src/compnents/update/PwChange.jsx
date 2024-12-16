@@ -2,8 +2,7 @@ import React, { useRef, useState } from 'react';
 import api from '../../config/api.config';
 import './pwchange.css';
 
-const PwChange = () => {
-  const user = JSON.parse(sessionStorage.getItem("sessionUser"));
+const PwChange = ({user}) => {
   const currentPwdRef = useRef();
   const newPwdRef = useRef();
   const confirmPwdRef = useRef();
@@ -12,7 +11,7 @@ const PwChange = () => {
   const [successMessage, setSuccessMessage] = useState('');
 
   // 특수문자 정규식
-  const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
+  const passwordRegex = /^(?=.*[a-z])(?=.*\d)(?=.*[\W_])[a-z\d\W_]{8,}$/i;
 
   const handleChangePassword = () => {
     const currentPwd = currentPwdRef.current.value;
@@ -28,7 +27,7 @@ const PwChange = () => {
       setErrorMessage("새 비밀번호와 비밀번호 확인이 일치하지 않습니다.");
       return;
     }
-    if (!specialCharRegex.test(newPwd)) {
+    if (!passwordRegex.test(newPwd)) {
       setErrorMessage("비밀번호의 조건에 맞지 않습니다.");
       return;
     }
@@ -37,8 +36,8 @@ const PwChange = () => {
     api
       .post('/user/change-password', {
         id: user.user_id,
-        currentPassword: currentPwd,
-        newPassword: newPwd,
+        currentPwd: currentPwd,
+        newPwd: newPwd,
       })
       .then((res) => {
         if (res.data.success) {

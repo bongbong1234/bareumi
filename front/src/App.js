@@ -13,8 +13,7 @@ import { UserContext } from './context/UserContext';
 import History from './compnents/history/History';
 import { useStopwatch } from 'react-timer-hook';
 import flask from './config/flask.config';
-import UpDate from './compnents/update/UpDate';
-import PwChange from './compnents/update/PwChange';
+import UserChange from './compnents/update/UserChange';
 
 function App() {
 
@@ -115,7 +114,7 @@ function App() {
           <Route path='/login' element={<Login setLogin={setLogin}/>}></Route>
           <Route path='/signup' element={<Signup  />}></Route>
           <Route path='/signup/validate-email' element={<ValidateEmail/>}></Route>
-          <Route path='/pw-chk/:path' element={<UpDate/>}></Route>
+          <Route path='/pw-chk/:path' element={<UserChange/>}></Route>
         </Routes>
       </UserContext.Provider>
       
