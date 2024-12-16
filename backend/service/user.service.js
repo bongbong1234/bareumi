@@ -32,3 +32,13 @@ exports.validate = async (value,id) => {
         return false;
     }
 }
+
+exports.pwdChk = async (id,pwd) => {
+    const pwdChk = await userDao.pwdChk(id,pwd);
+
+    if(pwdChk) {
+        return true;
+    } else {
+        return false;
+    }
+}

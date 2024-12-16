@@ -3,7 +3,15 @@ const conn = require('../config/db.js');
 
 // login 비동기 함수라서 돌아올땐 resolve값에다가 넣기
 exports.login = async (id,pwd) => {
-    const sql = "select * from tb_user where user_id = ? and user_pwd = SHA2(?,256)";
+    const sql = `
+        select user_id,
+        user_name,user_email,
+        profile_img,
+        signup_date,
+        email_validate
+        from tb_user 
+        where user_id = ? and user_pwd = SHA2(?,256)
+    `;
     return new Promise ((resolve, reject) => {
         conn.query(sql,[id,pwd], (err,rows) => {
             if (err) {
@@ -74,4 +82,26 @@ exports.validate = async (value,id) => {
             }
         })
     })
+}
+
+
+exports.pwdChk = async (id,pwd) => {
+    console.log("dao 아이디:",id);
+    console.log("dao 비밀번호:",pwd);
+    const sql = "select count(*) as ctn from tb_user where user_id =? and user_pwd = sha2(?,256)"
+    return new Promise ((resolve,reject) => {
+        conn.query(sql, [id,pwd], (err, rows) => {
+            if (err) {
+                console.log(err);
+                reject(false);
+            } else {
+                console.log(rows);
+                if(rows[0].ctn === 1) {
+                    resolve(true);
+                } else {
+                    resolve(false);
+                }
+            }
+        })
+    }) 
 }
