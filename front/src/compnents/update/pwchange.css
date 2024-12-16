@@ -1,4 +1,5 @@
 .pwchange-container {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,7 +8,6 @@
     padding: 20px;
     border-radius: 10px;
     width: 400px;
-    margin-right: 17px ;
   }
   
   .pwchange-input-group {
@@ -23,7 +23,7 @@
   }
   
   .pwchange-input {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;

@@ -74,3 +74,14 @@ exports.pwdChk = async (req,res) => {
         res.status(401).json({message: false})
     }
 }
+
+exports.changePwd = async(req,res) => {
+    const {id,currentPwd, newPwd} = req.body
+    const changePwdChk = await userService.changePwd(id,currentPwd,newPwd);
+
+    if(changePwdChk) {
+        return res.status(200).json({message: "변경완료", success : true})
+    } else {
+        return res.status(401).json({message: "변경실패", success : false})
+    }
+}

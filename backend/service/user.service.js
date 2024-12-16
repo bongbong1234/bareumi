@@ -42,3 +42,13 @@ exports.pwdChk = async (id,pwd) => {
         return false;
     }
 }
+
+exports.pwdChange = async (id,currentPwd, newPwd) => {
+    const pwdChangeChk = await userDao.pwdChange(id,currentPwd, newPwd)
+
+    if(pwdChangeChk) {
+        return true;
+    } else {
+        return false;
+    }
+}
