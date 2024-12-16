@@ -1,0 +1,36 @@
+.memberout-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 360px;
+    margin-right: 12px;
+  }
+  
+  .memberout-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4d4f;
+    margin-bottom: 20px;
+  }
+  
+  .memberout-warning {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .memberout-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .memberout-button:hover {
+    background-color: #d9363e;
+  }

@@ -35,8 +35,12 @@ function MyPage() {
   }
 
   const toPwChk = (path) => {
-    if(path == 'update') {
-      nav(`/pw-chk/${path}`); 
+    if (path == 'update') {
+      nav(`/pw-chk/${path}`);
+    }else if(path == 'pwchange'){
+      nav(`/pw-chk/${path}`);
+    }else if(path == 'memberout'){
+      nav(`/pw-chk/${path}`);
     }
   }
 
@@ -143,7 +147,7 @@ function MyPage() {
               <div className="pause-time">
                 <span>00 : 00 ~ 00: 00</span>
               </div>
-              <div className="pause-setting" onClick={()=>settingChange("pause")}>설정변경</div>
+              <div className="pause-setting" onClick={() => settingChange("pause")}>설정변경</div>
             </div>
           </div>
         )}
@@ -153,7 +157,15 @@ function MyPage() {
             <div className="userinfo">
               {/* 프로필 섹션 */}
               <div className="profile-img">
-                <div className="circle"></div>
+                {sessionUser.profile_img ? (
+                  <img
+                    src={sessionUser.profile_img}
+                    alt="프로필 이미지"
+                    className="profile-img-content"
+                  />
+                ) : (
+                  <div className="profile-img-placeholder"></div> // 이미지가 없을 때
+                )}
               </div>
               <div className="profile-details">
                 <h3>{sessionUser.user_name}</h3>
@@ -168,15 +180,15 @@ function MyPage() {
                 <span>정보 수정</span>
                 <span className="arrow">&gt;</span>
               </div>
-              <div className="settings-item" onClick={() => console.log("비밀번호 변경 클릭!")}>
+              <div className="settings-item" onClick={() => toPwChk('pwchange')}>
                 <span>비밀번호 변경</span>
                 <span className="arrow">&gt;</span>
               </div>
-              <div className="settings-item" onClick={() => console.log("기록 초기화 클릭!")}>
+              <div className="settings-item" onClick={() => console.log("기록초기화 클릭!")}>
                 <span>기록 초기화</span>
                 <span className="arrow">&gt;</span>
               </div>
-              <div className="settings-item" onClick={() => console.log("회원 탈퇴 클릭!")}>
+              <div className="settings-item" onClick={() => toPwChk("memberout")}>
                 <span>회원탈퇴</span>
                 <span className="arrow">&gt;</span>
               </div>

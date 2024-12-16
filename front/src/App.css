@@ -39,6 +39,10 @@
   bottom: 70px; left: calc(100% - 840px)
 }
 
+.fix-btn:hover{
+  cursor:pointer;
+}
+
 .container {
  margin-bottom: 100px;
 }

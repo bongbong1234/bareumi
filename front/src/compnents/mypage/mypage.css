@@ -378,13 +378,41 @@
 }
 
 /* 이미지 css */
-.circle {
-    background-color: #f2f2f2;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    margin-left: 10px;
-}
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* 원형 모양 */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0; /* 기본 배경색 */
+    border: 2px solid #ddd;
+    margin: 0 auto;
+  }
+  
+  .profile-img-content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지 비율 유지 */
+  }
+  
+  /* 이미지가 없을 때의 스타일 */
+  .profile-img-placeholder {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* 원형 모양 */
+    background-color: #d9d9d9; /* 회색 배경색 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-img-placeholder::after {
+    content: "No Image";
+    color: #888;
+    font-size: 14px;
+  }
 
 .profile-details {
     margin-left: 45%;
@@ -392,7 +420,7 @@
 }
 
 .profile-details h3 {
-    margin-left: 60%;
+    margin-left: 55%;
     font-size: 20px;
 }
 
