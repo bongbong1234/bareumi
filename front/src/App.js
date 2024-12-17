@@ -48,6 +48,8 @@ function App() {
     api.get("/user/logout").then(
       res => {
         if(res.data.message === true) {
+          nav("/")
+          sessionStorage.clear();
           window.location.reload();
         }
       }
@@ -105,7 +107,8 @@ function App() {
         hours, 
         onSensorStart,
         onSensorPause,
-        onSensorStop}}>
+        onSensorStop,
+        logout}}>
         <Routes>
           <Route path="/" element={<Main/>}></Route>
           <Route path="/my-page" element={<MyPage/>}></Route>

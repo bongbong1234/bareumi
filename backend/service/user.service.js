@@ -43,10 +43,39 @@ exports.pwdChk = async (id,pwd) => {
     }
 }
 
-exports.pwdChange = async (id,currentPwd, newPwd) => {
-    const pwdChangeChk = await userDao.pwdChange(id,currentPwd, newPwd)
+exports.userInfoChange = async (userNum,profileImg,name) => {
+    const userInfoChangeChk = await userDao.userInfoChange(userNum,profileImg,name);
+
+    if(userInfoChangeChk) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+exports.pwdChange = async (userNum,currentPwd, newPwd) => {
+    const pwdChangeChk = await userDao.pwdChange(userNum,currentPwd, newPwd)
 
     if(pwdChangeChk) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+exports.resetRecord = async (userNum) => {
+    const resetRecordChk = await userDao.resetRecord(userNum);
+    if(resetRecordChk) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+exports.userDelete = async (userNum) => {
+    const deleteChk = await userDao.deleteUser(userNum);
+
+    if(deleteChk) {
         return true;
     } else {
         return false;

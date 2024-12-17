@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import api from '../../config/api.config';
-import './update.css';
+import './userChange.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import PwChange from './PwChange';
 import MemberOut from './MemberOut';

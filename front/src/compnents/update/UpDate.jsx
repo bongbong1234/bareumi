@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import api from '../../config/api.config';
+import './userChange.css';
 
 const Update = ({user}) => {
 const [previewImage, setPreviewImage] = useState(null); // 이미지 미리보기

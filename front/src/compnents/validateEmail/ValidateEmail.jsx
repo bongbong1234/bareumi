@@ -16,7 +16,7 @@ const ValidateEmail = () => {
     const userRef = useRef();
 
     useEffect(()=> {
-        api.post('/mail/send-validate',{
+        api.post('/user/send-validate',{
             to: validateEmail,
         }).then(res => {
             setValue(res.data.validateVal);

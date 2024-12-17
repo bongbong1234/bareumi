@@ -33,25 +33,4 @@ const sendEmail = async ({to}) => {
     }
 }
 
-router.post("/send-validate", async (req,res) => {
-    const {to} = req.body;
-    console.log("받아온 이메일:",to);
-    try {
-        const {info,validateVal} = await sendEmail({to});
-        console.log(validateVal);
-        res.status(200).json({
-            success: true,
-            message:"이메일 보내기 성공",
-            info,
-            validateVal
-        })
-    } catch (err) {
-        res.status(500).json({
-            success: false,
-            message: err.massage,
-        })
-    }
-
-})
-
-module.exports = router;
+module.exports = sendEmail;
