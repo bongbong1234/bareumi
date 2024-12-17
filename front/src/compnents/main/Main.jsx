@@ -14,8 +14,8 @@ const Main = () => {
     const [baseTime, setBaseTime] = useState(8);
     const [minAlertCount,setMinAlertCount] = useState(5);
     const [todayAlertCtn,setTodayAlertCtn] = useState(0);
-    const [left,setLeft] = useState(50);
-    const [right,setRight] = useState(50);
+    const [left,setLeft] = useState(60);
+    const [right,setRight] = useState(40);
     const [weekHour, setWeekHour] = useState([]);
     const [totalHour, setTotalHour] = useState(10);
     const [totalAlert,setTotalAlert] = useState(5);
@@ -320,13 +320,13 @@ const Main = () => {
         <div className='week-container'>
             <p>이번주 착용시간</p>
             <div className='chart-box'>
-                {/* <div className='chart'>
+                <div className='chart'>
                     <ApexChart 
                     series={weekAnalysisOptions.series} 
                     options={weekAnalysisOptions.options}
                     height={250}
                     />
-                </div> */}
+                </div>
             </div>
         </div>
 
