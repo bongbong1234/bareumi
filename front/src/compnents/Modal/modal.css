@@ -1,0 +1,28 @@
+.modal-container {
+    position: fixed;
+    top:0; left:0;
+    width: 100vw; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    animation: fade-in 0.5s;
+}
+
+.modal-box {
+    background-color: white;
+    position: relative;
+    left: 29.7%; top: 400px;
+    width: 500px;
+    padding: 20px 30px;
+}
+
+.modal-close-btn {
+    margin-left: 95%;
+}
+
+.modal-close-btn > img {
+    width: 20px; height: 20px;
+}
+
+.modal-close-btn > img:hover {
+    cursor: pointer;
+}

@@ -1,4 +1,5 @@
 const userService = require("../service/user.service.js")
+const emailUtil = require("../util/sendEmail.js")
 
 exports.login = async (req,res) => {
     const {id, pwd} = req.body;
@@ -23,9 +24,6 @@ exports.duplicate = async (req,res) => {
     const {id} = req.body
     
     const idDuplicateChk = await userService.duplicate(id);
-
-    console.log("controller:",idDuplicateChk)
-
     if (idDuplicateChk) {
         res.status(200).json({message : true});
     } else {
@@ -44,11 +42,24 @@ exports.signup = async (req,res) => {
     }
 }
 
-exports.logout = (req,res) => {
-    if (req.session.user) {
-        req.session.user = null;
-        console.log("로그아웃 : ",req.session)
-        return res.json({message:true});
+
+exports.validateSend = async (req,res) => {
+    const {to} = req.body;
+    console.log("받아온 이메일:",to);
+    try {
+        const {info,validateVal} = await emailUtil({to});
+        console.log(validateVal);
+        res.status(200).json({
+            success: true,
+            message:"이메일 보내기 성공",
+            info,
+            validateVal
+        })
+    } catch (err) {
+        res.status(500).json({
+            success: false,
+            message: err.massage,
+        })
     }
 }
 
@@ -61,6 +72,16 @@ exports.validate = async (req,res) => {
         res.status(401).json({message: false});
     }
 }
+
+exports.logout = (req,res) => {
+    if (req.session.user) {
+        req.session.user = null;
+        console.log("로그아웃 : ",req.session)
+        return res.json({message:true});
+    }
+}
+
+
 
 exports.pwdChk = async (req,res) => {
     const {id,pwd} = req.body
@@ -75,13 +96,54 @@ exports.pwdChk = async (req,res) => {
     }
 }
 
-exports.changePwd = async(req,res) => {
-    const {id,currentPwd, newPwd} = req.body
-    const changePwdChk = await userService.changePwd(id,currentPwd,newPwd);
+exports.userInfoChange = async (req,res) => {
+    const {userNum, profileImg, name} = req.body;
+
+    const userInfoChangeChk = await userService.userInfoChange(userNum,profileImg,name);
+}
+
+exports.pwdChange = async (req,res) => {
+    const {userNum,currentPwd, newPwd} = req.body
+    console.log(userNum,currentPwd,newPwd);
+    const changePwdChk = await userService.pwdChange(userNum,currentPwd,newPwd);
 
     if(changePwdChk) {
-        return res.status(200).json({message: "변경완료", success : true})
+        return res.status(200).json({message: "변경완료", success : true});
     } else {
-        return res.status(401).json({message: "변경실패", success : false})
+        return res.status(401).json({message: "변경실패", success : false});
+    }
+}
+
+exports.resetReocrd = async (req,res) => {
+    const {userNum, profileImg, name} = req.body
+    const resetRecordChk = await userService.resetRecord(userNum, profileImg, name);
+
+    if(resetRecordChk) {
+        return res.status(201).json({message:"초기화 완료!", success: true});
+    } else {
+        return res.status(201).json({message:"초기화 실패!", success: false});
+    }
+}
+
+
+exports.resetReocrd = async (req,res) => {
+    const {userNum} = req.body
+    const resetRecordChk = await userService.resetRecord(userNum);
+
+    if(resetRecordChk) {
+        return res.status(201).json({message:"초기화 완료!", success: true});
+    } else {
+        return res.status(201).json({message:"초기화 실패!", success: false});
+    }
+}
+
+exports.userDelete = async (req,res) => {
+    const {userNum} = req.body
+    const userDeleteChk = await userService.userDelete(userNum);
+
+    if(userDeleteChk) {
+        return res.status(201).json({message:"삭제 완료!", success: true});
+    } else {
+        return res.status(201).json({message:"삭제 실패!", success: false});
     }
 }

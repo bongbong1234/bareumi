@@ -1,5 +1,6 @@
-/* update.css */
-.pwchk-container {
+
+   /*비밀번호 변경*/
+  .pwchk-container {
     text-align: center;
     margin: 20px 0;
     font-size: 18px;
@@ -70,6 +71,7 @@
     color: #001d6e;
     font-weight: bold;
   }
+  /* 정보수정 */
   .profile-preview {
     width: 120px;
     height: 120px;
@@ -113,4 +115,102 @@
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+/*비밀번호 변경*/
+.pwchange-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+  }
+  
+  .pwchange-input-group {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .pwchange-input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .pwchange-input {
+    width: 95%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .pwchange-error {
+    color: red;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .pwchange-success {
+    color: green;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .pwchange-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #002366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .pwchange-button:hover {
+    background-color: #001a4d;
+  }
+
+/*회원 탈퇴*/
+.memberout-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 360px;
+    margin-right: 12px;
+  }
+  
+  .memberout-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4d4f;
+    margin-bottom: 20px;
+  }
+  
+  .memberout-warning {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .memberout-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .memberout-button:hover {
+    background-color: #d9363e;
   }

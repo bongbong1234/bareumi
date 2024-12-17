@@ -4,16 +4,14 @@ const session = require("express-session")
 const cors = require("cors");
 const app = express();
 
-const { SerialPort } = require('serialport');  // SerialPort 모듈 가져오기
-const { ReadlineParser } = require('@serialport/parser-readline');  // Readline 파서 모듈 가져오기
-
 // router variable
 const userRouter = require("./routes/user.route");
-const sensorRouter = require("./routes/sensor.route")
+const sensorRouter = require("./routes/sensor.route");
 
 // util
-const auth = require("./util/auth.js")
+const auth = require("./util/auth.js");
 const mail = require("./util/sendEmail.js");
+const arduinoParser = require("./util/arduinoSeraiParser.js"); 
 
 // view engine setup
 app.use(express.json());

@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import api from '../../config/api.config';
-import './memberout.css';
+import './userChange.css';
+import { UserContext } from '../../context/UserContext';
+import { useNavigate } from 'react-router-dom';
 
 const MemberOut = () => {
+  const {logout} = useContext(UserContext);
+  const nav = useNavigate();
   const user = JSON.parse(sessionStorage.getItem("sessionUser"));
 
   const handleMemberOut = () => {
     if (window.confirm("정말로 회원 탈퇴하시겠습니까? 이 작업은 되돌릴 수 없습니다.")) {
       api
-        .post('/user/delete-account', { id: user.user_id })
+        .delete('/user/delete-account', { data: {
+          userNum: user.user_num,
+        } })
         .then((res) => {
           alert("회원탈퇴가 완료되었습니다. 이용해주셔서 감사합니다.");
-          sessionStorage.clear(); // 세션 데이터 초기화
-          window.location.href = "/"; // 홈 페이지로 이동
+          nav("/");
+          logout();
         })
         .catch((err) => {
           console.error(err);

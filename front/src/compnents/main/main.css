@@ -10,7 +10,7 @@
     display: inline-block;
 }
 .main-container  .stopwatch-box button {
-    border: none; background-color: #fff;
+    border: none; background-color: rgba(0, 0, 0, 0);
 }
 .main-container .stopwatch-box button:hover {
     cursor: pointer;
