@@ -4,7 +4,7 @@ import './userChange.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import PwChange from './PwChange';
 import MemberOut from './MemberOut';
-import Update from './Update';
+import Update from './UpDate';
 
 const UserChange = () => {
   const {path} = useParams();
