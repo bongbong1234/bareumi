@@ -11,6 +11,7 @@ const History = () => {
      const [baseTime, setBaseTime] = useState(8);
      const [log,setLog] = useState([]);
 
+     const date = new Date();
 
     const formatTime = (value) => {
         return String(value).padStart(2, '0'); // 한 자리 숫자 앞에 0 추가
@@ -73,14 +74,36 @@ const History = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {
-                            log.length !== 0 ? <></> :
-                            <>
-                                <tr>
-                                    <td colSpan={4}>정보가없습니다!</td>
-                                </tr>
-                            </>
-                        }
+                        <tr>
+                            <td>1</td>
+                            <td>11:40</td>
+                            <td>10초</td>
+                            <td>{`${date.getFullYear()} - ${date.getMonth()+1} - ${date.getDate()}`}</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>13:20</td>
+                            <td>5초</td>
+                            <td>{`${date.getFullYear()} - ${date.getMonth()+1} - ${date.getDate()}`}</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>13:35</td>
+                            <td>10초</td>
+                            <td>{`${date.getFullYear()} - ${date.getMonth()+1} - ${date.getDate()}`}</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>13:40</td>
+                            <td>10초</td>
+                            <td>{`${date.getFullYear()} - ${date.getMonth()+1} - ${date.getDate()}`}</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>14:50</td>
+                            <td>30초</td>
+                            <td>{`${date.getFullYear()} - ${date.getMonth()+1} - ${date.getDate()}`}</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

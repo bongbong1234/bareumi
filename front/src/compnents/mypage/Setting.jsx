@@ -56,19 +56,19 @@ const Setting = ({setModalOn,setName}) => {
     <h4>알림 강화</h4>
     <div className="alert-box">
       <div className="alert-avg">
-        <p>평균 알람 시간 <span>00 : 00 ~ 00 : 00</span></p>
+        <p>평균 알람 시간 <span>16 : 00 ~ 17 : 00</span></p>
       </div>
       <h5>알림 강화</h5>
       <div className="alert-enhancement">
         <div className="alert-content">
           <div className="alert-time">
             <label>알림 강화 시간</label>
-            <p>00:00 ~ 00:00</p>
+            <p>16:00 ~ 17:00</p>
           </div>
           <div className="alert-vibration-wrapper">
             <div className="alert-vibration">
               <label>진동 세기</label>
-              <p>n</p>
+              <p>3</p>
             </div>
             <div className="alert-setting" onClick={() => settingChange("enhanced")}>
               설정변경
@@ -81,16 +81,16 @@ const Setting = ({setModalOn,setName}) => {
         <div className="mini-time">
           <div className="check-time">
             <p>비정상 자세 체크 시간 :
-              <span>n분</span></p>
+              <span>1분</span></p>
           </div>
           <div className="row">
             <div className="wear-time">
               <p>최소 착용 시간 :
-                <span>n시간</span></p>
+                <span>8시간</span></p>
             </div>
             <div className="alert-count">
               <p>최소 알림 횟수 :
-                <span>n</span></p>
+                <span>5회</span></p>
             </div>
           </div>
         </div>
