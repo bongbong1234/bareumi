@@ -166,7 +166,7 @@
     line-height: normal;
 }
 .danger_num span {
-    margin-left: 10px;
+    margin-left: 5px;
     font-size: 28px;
     font-style: normal;
     font-weight: 700;
@@ -267,7 +267,7 @@
         font-weight: 500;
     }
     .totalwear-container .total-sub p:last-child {
-        margin-left: 50px;
+        margin-left: 20px;
     }
     .totalwear-container .total-sub p > span {
         font-size: 28px;

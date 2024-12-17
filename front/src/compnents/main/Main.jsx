@@ -7,13 +7,12 @@ import {} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ApexChart from 'react-apexcharts';
 import { UserContext } from '../../context/UserContext';
-import flask from '../../config/flask.config';
 
 const Main = () => {
 
     const [count,setCount] = useState(0);
     const [baseTime, setBaseTime] = useState(8);
-    const [minAlertCount,setMinAlertCount] = useState(8);
+    const [minAlertCount,setMinAlertCount] = useState(5);
     const [todayAlertCtn,setTodayAlertCtn] = useState(0);
     const [left,setLeft] = useState(50);
     const [right,setRight] = useState(50);
@@ -258,8 +257,8 @@ const Main = () => {
         </div>
         <div className='day-total-box'>
             <div className='day-total-num'>
-                <p>오늘 착용시간  : <span> {formatTime(hours)} 시간</span></p>
-                <p>오늘 알림횟수 : <span> {count} 회</span></p>
+                <p>오늘 착용시간  : <span> 7 시간</span></p>
+                <p>오늘 알림횟수 : <span> 5 회</span></p>
             </div>
             <div className='charts'>
                  <div className='chart'>
@@ -293,12 +292,15 @@ const Main = () => {
             <div className='analysis-box'>
                 <div>
                     <div className='danger_num'>
-                        <p>현재 위험등급 : <span>없음</span></p>
+                        <p>현재 위험등급 : <span>증후군</span></p>
                     </div>
                     <div className='analysis'>
                         <p>분석현황</p>
                         <div className='text'>
-                            <p>측정된 기록이 없습니다!</p>
+                            <p>
+                                틀어짐 상황이 점점 좋아지고 있어요!<br/>
+                                열심히 하고 계시군요!<br/>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -318,13 +320,13 @@ const Main = () => {
         <div className='week-container'>
             <p>이번주 착용시간</p>
             <div className='chart-box'>
-                <div className='chart'>
+                {/* <div className='chart'>
                     <ApexChart 
                     series={weekAnalysisOptions.series} 
                     options={weekAnalysisOptions.options}
                     height={250}
                     />
-                </div>
+                </div> */}
             </div>
         </div>
 
@@ -332,18 +334,18 @@ const Main = () => {
             <p>총 사용시간 분석</p>
             <div className='contents'>
                 <div className='total-sub'>
-                    <p>총 착용시간 : <span>없음</span></p>
-                    <p>총 알람횟수 : <span>없음</span></p>
+                    <p>총 착용시간 : <span>20시간</span></p>
+                    <p>총 알람횟수 : <span>30회</span></p>
                 </div>
                 <div className='content'>
                    <div className='wear-time'>
                         <div>
                             <p>평균 알림 시간</p>
-                            <p>00:00 ~ 00:00</p>
+                            <p>16:00 ~ 17:00</p>
                         </div>
                         <div>
                             <p>알림 강화 시간</p>
-                            <p>00:00 ~ 00:00</p>
+                            <p>16:00 ~ 17:00</p>
                         </div>
                    </div>
                    <div>
