@@ -1,6 +1,7 @@
-import React from 'react'
 import './modal.css'
 import EnhancedSetting from './setting/EnhancedSetting'
+import MinSetting from './setting/MinSetting';
+import PauseSetting from './setting/PauseSetting';
 
 const Modalbase = ({name,setName,setModalOn}) => {
     console.log(name);
@@ -10,12 +11,22 @@ const Modalbase = ({name,setName,setModalOn}) => {
     }
   return (
     <div className='modal-container'>
-
-       <div className='modal-box'>
-       <div className='modal-close-btn'>
-            <img src={'http://localhost:3000/icon/close.png'} onClick={closeModalBox}/>
-       </div>
-            {name === 'enhanced' && <EnhancedSetting/>}
+       <div>
+            {name === 'enhanced' && <EnhancedSetting 
+            setModalOn={setModalOn} 
+            closeModalBox ={closeModalBox} />}
+            {
+              name === 'min' && <MinSetting 
+              setModalOn={setModalOn} 
+              closeModalBox ={closeModalBox}
+              />
+            }
+            {
+              name === 'pause' &&  <PauseSetting 
+              setModalOn={setModalOn} 
+              closeModalBox ={closeModalBox}
+              />
+            }
        </div>
     </div>
   )

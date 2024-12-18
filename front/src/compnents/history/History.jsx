@@ -2,12 +2,11 @@ import { faPause, faPlay, faStop } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext, useState } from 'react'
 import ReactApexChart from 'react-apexcharts';
-import { useStopwatch } from 'react-timer-hook';
-import { UserContext } from '../../context/UserContext';
 import "./history.css";
+import { TimeContext } from '../../context/TimeContext';
 
 const History = () => {
-     const {seconds, minutes, hours, onSensorStart, onSensorPause, onSensorStop} = useContext(UserContext);
+     const {seconds, minutes, hours, onSensorStart, onSensorPause, onSensorStop} = useContext(TimeContext);
      const [baseTime, setBaseTime] = useState(8);
      const [log,setLog] = useState([]);
 

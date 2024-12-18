@@ -4,18 +4,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBasketShopping, faClockRotateLeft, faHouse } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import {} from '@fortawesome/free-brands-svg-icons';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import api from '../../config/api.config';
 const Navigation = () => {
 
     const nav = useNavigate();
-    const path = useLocation().pathname;
     const [select, setSelect] = useState('')
     const naviRef = useRef();
 
   
-    const sessionId = "session-id";
-
     useEffect(()=> {
         setSelect(sessionStorage.getItem("currentPath"));
     },[])

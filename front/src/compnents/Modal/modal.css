@@ -1,4 +1,5 @@
 .modal-container {
+    overflow: visible;
     position: fixed;
     top:0; left:0;
     width: 100vw; height: 100vh;
@@ -10,8 +11,6 @@
 .modal-box {
     background-color: white;
     position: relative;
-    left: 29.7%; top: 400px;
-    width: 500px;
     padding: 20px 30px;
 }
 
@@ -25,4 +24,139 @@
 
 .modal-close-btn > img:hover {
     cursor: pointer;
+}
+
+.ant-picker {
+    width: 35%;
+}
+.ant-picker:first-child {
+    margin-right: 10px;
+}
+
+.ant-picker:last-child {
+    margin-left: 10px;
+}
+
+.ant-picker > .ant-picker-input input {
+    font-size: 18px;
+}
+
+/*강화*/
+.enhanced-setting {
+    width: 100%;
+    overflow: hidden;
+}
+
+.enhanced-setting.modal-box {
+    left: 41.5%; top: 300px;
+    width: 300px;
+}
+
+.enhanced-setting > div{
+    margin-top: 20px;
+}
+
+.enhanced-setting > div:first-child{
+    margin-top: 0;
+}
+
+.enhanced-setting > div > div {
+    margin-top: 10px;
+}
+
+.enhanced-setting label {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.enhanced-setting button {
+    width: 90%;
+    background-color: #001d6e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+
+.enhanced-setting button:hover {
+    background-color: #003399;
+    transition: 0.2s;
+}
+
+.enhanced-setting select {
+    border: 1px solid #c2c2c2; border-radius: 5px;
+    padding: 5px;
+}
+
+/*최소 사용 모달*/
+.min-setting-box.modal-box {
+    left: 41.5%; top: 300px;
+    width: 300px;
+}
+.min-setting-box label {
+    font-size: 18px;
+    font-weight: 700;
+}
+.min-setting-box input {
+    width: 90%;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #c2c2c2; border-radius: 5px;
+    outline: none;
+}
+
+.min-setting-box input:focus {
+    border-color: #001d6e;
+    outline: none;
+}
+
+.min-setting-box div:nth-child(2n) {
+    margin: 10px 0;
+}
+
+.min-setting-box button {
+    width: 90%;
+    background-color: #001d6e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+
+.min-setting-box button:hover {
+    background-color: #003399;
+    transition: 0.2s;
+}
+
+/*일시정지 모달*/
+
+.pause-setting-box.modal-box {
+    left: 41.5%; top: 300px;
+    width: 300px;
+}
+
+.pause-setting-box button {
+    width: 90%;
+    background-color: #001d6e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+
+.pause-setting-box button:hover {
+    background-color: #003399;
+    transition: 0.2s;
 }
