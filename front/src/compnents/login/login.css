@@ -36,7 +36,7 @@
   }
   
   .login-field input {
-    width: calc(100% - 10px);
+    width: calc(100% - 15px);
     padding: 8px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -50,7 +50,7 @@
   
   .btn-login,
   .btn-signup {
-    width: 100%;
+    width: 90%;
     background-color: #001d6e;
     color: #fff;
     border: none;

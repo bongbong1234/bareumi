@@ -98,6 +98,7 @@
 }
 
 .chart > p {
+    margin-bottom: 0 !important;
     padding-top: 10px;
     color: #000;
     text-align: center;

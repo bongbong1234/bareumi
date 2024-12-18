@@ -43,8 +43,6 @@ exports.login = async (id,pwd) => {
                 }
             }
         })
-
-
     })
 }
 

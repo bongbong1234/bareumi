@@ -14,6 +14,8 @@ import History from './compnents/history/History';
 import { useStopwatch } from 'react-timer-hook';
 import flask from './config/flask.config';
 import UserChange from './compnents/update/UserChange';
+import { TimeContext } from './context/TimeContext';
+import { ModalContext } from './context/ModalContext';
 
 function App() {
 
@@ -21,12 +23,14 @@ function App() {
   const [newId,setNewId] = useState('');
   const [validateEmail, setValidateEmail] = useState('');
   const [sensorSet,setSensorSet] = useState(false);
-  const sessionId = "session-id";
-
+  const [enhanceStartVal,setEnhanceStartVal] = useState("16:10");
+  const [enhanceEndVal, setEnhanceEndVal] = useState("17:00");
+  const [enhanceVibe, setEnhanceVibe] = useState(1);
   const [login,setLogin] = useState(false);
 
-
   const {seconds, minutes, hours, start, pause, reset} = useStopwatch({autoStart : false});
+
+  const sessionId = "session-id";
 
   useEffect(()=> {
      api.get("./auth/session-chk",{
@@ -38,6 +42,7 @@ function App() {
         sessionStorage.setItem("sessionUser",JSON.stringify(res.data.item));
         setLogin(true);
      }).catch(err => {
+      setLogin(false);
       console.error(err)
       nav("/login");
      })
@@ -98,27 +103,26 @@ function App() {
   
   return (
     <div className="mobile-container">
-      <UserContext.Provider value ={{newId,
-        validateEmail,
-        setNewId,
-        setValidateEmail,
-        seconds, 
-        minutes, 
-        hours, 
-        onSensorStart,
-        onSensorPause,
-        onSensorStop,
-        logout}}>
-        <Routes>
-          <Route path="/" element={<Main/>}></Route>
-          <Route path="/my-page" element={<MyPage/>}></Route>
-          <Route path="/history" element={<History/>} ></Route>
-          <Route path="/product" element={<Product/>}></Route>
-          <Route path='/login' element={<Login setLogin={setLogin}/>}></Route>
-          <Route path='/signup' element={<Signup  />}></Route>
-          <Route path='/signup/validate-email' element={<ValidateEmail/>}></Route>
-          <Route path='/pw-chk/:path' element={<UserChange/>}></Route>
-        </Routes>
+      <UserContext.Provider value = {{newId,validateEmail,setNewId,setValidateEmail,logout}}>
+          <TimeContext.Provider value = {{seconds,minutes,hours,onSensorStart,onSensorPause,onSensorStop,}}>
+            <ModalContext.Provider value = {{enhanceStartVal,
+              enhanceVibe,
+              enhanceEndVal,
+              setEnhanceStartVal,
+              setEnhanceEndVal,
+              setEnhanceVibe}}>
+              <Routes>
+                <Route path="/" element={<Main/>}></Route>
+                <Route path="/my-page" element={<MyPage/>}></Route>
+                <Route path="/history" element={<History/>} ></Route>
+                <Route path="/product" element={<Product/>}></Route>
+                <Route path='/login' element={<Login setLogin={setLogin}/>}></Route>
+                <Route path='/signup' element={<Signup />}></Route>
+                <Route path='/signup/validate-email' element={<ValidateEmail/>}></Route>
+                <Route path='/pw-chk/:path' element={<UserChange/>}></Route>
+              </Routes>
+            </ModalContext.Provider>
+        </TimeContext.Provider>
       </UserContext.Provider>
       
        {

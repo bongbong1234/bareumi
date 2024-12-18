@@ -1,7 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { ModalContext } from '../../context/ModalContext';
 
 const Setting = ({setModalOn,setName}) => {
-      const [vibLevel, setVibLevel] = useState(1);
+    const {enhanceStartVal, enhanceEndVal, enhanceVibe} = useContext(ModalContext);
+    const [vibLevel, setVibLevel] = useState(1);
+
+    console.log(enhanceStartVal,enhanceEndVal)
 
     const settingChange = (name) => {
         if (name == "enhanced") {
@@ -15,7 +19,8 @@ const Setting = ({setModalOn,setName}) => {
         } else if (name == "reset") {
             console.log("초기화 클릭!")
         } else {
-            console.log("일시정지 설정!!")
+          setModalOn(true);
+          setName("pause");
         }
       }
     
@@ -63,12 +68,12 @@ const Setting = ({setModalOn,setName}) => {
         <div className="alert-content">
           <div className="alert-time">
             <label>알림 강화 시간</label>
-            <p>16:00 ~ 17:00</p>
+            <p>{enhanceStartVal} ~ {enhanceEndVal}</p>
           </div>
           <div className="alert-vibration-wrapper">
             <div className="alert-vibration">
               <label>진동 세기</label>
-              <p>3</p>
+              <p>{enhanceVibe}</p>
             </div>
             <div className="alert-setting" onClick={() => settingChange("enhanced")}>
               설정변경
@@ -80,7 +85,7 @@ const Setting = ({setModalOn,setName}) => {
       <div className="mini-box">
         <div className="mini-time">
           <div className="check-time">
-            <p>비정상 자세 체크 시간 :
+            <p>비정상 자세 감지 시간 :
               <span>1분</span></p>
           </div>
           <div className="row">

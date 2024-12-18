@@ -7,9 +7,7 @@ import { UserContext } from '../../context/UserContext';
 const PwChange = ({user}) => {
 
   const {logout} = useContext(UserContext);
-
-  const nav = useNavigate();
-
+  
   const currentPwdRef = useRef();
   const newPwdRef = useRef();
   const confirmPwdRef = useRef();
