@@ -84,23 +84,23 @@
 
 ## 화면구성
 * 메인페이지
-<br/>
+   <br/>
 ![image](https://github.com/user-attachments/assets/0516ecf3-cdaa-4e5b-8fd9-fd992ab42bb1)
 
 * 기록 페이지
-<br/>
+    <br/>
 ![KakaoTalk_20241220_113427635](https://github.com/user-attachments/assets/35277d69-9f23-477a-bb06-55ae1e973b3d)
 
 * 알림설정페이지
-<br/>
+    <br/>
 ![KakaoTalk_20241220_113427635_03](https://github.com/user-attachments/assets/ccc57ce7-69cf-4e38-9aa4-56982132eb23)
 
 * 사용자설정 페이지
-<br/>
+    <br/>
 ![KakaoTalk_20241220_113427635_02](https://github.com/user-attachments/assets/3b7871a9-e951-4e0c-870f-94b8d2a1f448)
 
 * 맞춤제품 추천 페이지
-<br/>
+    <br/>
 ![KakaoTalk_20241220_113427635_01](https://github.com/user-attachments/assets/c873c01f-d2ae-4857-930b-ea0a85046d66)
 
 ## 팀원역할
@@ -109,7 +109,7 @@
     <td align="center"><img src="https://github.com/user-attachments/assets/d04ae20d-0fe9-4c7a-9c25-c1d09924d36c" width="100" height="100"/></td>
     <td align="center"><img src="https://github.com/user-attachments/assets/ec4bfa8a-9052-421f-bc00-f1534650bfb0" width="100" height="100"/></td>
     <td align="center"><img src="https://github.com/user-attachments/assets/e8e44d48-0623-46fd-b635-d8e1aadc3eba" width="100" height="100"/></td>
-    <td align="center"><img src="https://github.com/user-attachments/assets/d03fef22-1b27-49e0-b697-1ba0dc406fbe" width="100" height="100"/></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/e3cb263d-830c-4c76-bcd9-510ec2822d88" width="100" height="100"/></td>
     <td align="center"><img src="https://github.com/user-attachments/assets/e2a30e5d-bc86-4db5-b5e7-adbbbd371db5" width="100" height="100"/></td>
     <td align="center"><img src="https://github.com/user-attachments/assets/293e2060-c7a7-4e38-9172-0fb025c2093c" width="100" height="100"/></td>
   </tr>
