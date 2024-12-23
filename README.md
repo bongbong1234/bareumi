@@ -7,7 +7,7 @@
 ## 프로젝트기간
 2024.12.09~2024.12.19(2주)
 
-## *주요기능
+## 주요기능
 * 주제: 9축자이로센서를 사용해 사용자가 직접 제품을 착용하여 척추교정의 도움을 주는 웹앱서비스
 * 딥러닝과 GPTAPI를 사용하여 사용자 개인맞춤형 교정서비스 제공
 * 사용자가 앱에서 센서시작을 누르면 일일알림 데이터를 모아 딥러닝 모델이 측만증 현황을 알려줌
@@ -73,9 +73,15 @@
 ![image (1)](https://github.com/user-attachments/assets/5bc90350-59ea-43f6-b602-0413c6d9c8e3)
 
 ## 서비스 흐름도
-![image](https://github.com/user-attachments/assets/0e643740-e481-41e7-a2b9-24a3e3194842)
-![image](https://github.com/user-attachments/assets/bf37b4e4-edb3-420a-92c0-c4847a304c20)
-![image](https://github.com/user-attachments/assets/e75a442f-e8df-4b7a-951d-22b10df26669)
+* 메인화면 접속 프로세스
+      <br/>
+  ![image](https://github.com/user-attachments/assets/b63f2b0f-3ed9-4cbb-83d5-a644f4a4a9ed)
+* 맞춤 서비스 접속  프로세스
+      <br/>
+  ![image](https://github.com/user-attachments/assets/7ca1cdb1-6da2-43da-bcb8-41ca03a2cfaf)
+* 마이페이지 프로세스
+      <br/>
+  ![image](https://github.com/user-attachments/assets/b13b94ce-829a-4f61-89f3-61bd7a0f49b3)
 
 ## ER 다이어그램
 ![image](https://github.com/user-attachments/assets/06a77ce6-85b4-4f0d-84bd-5d6ae234d3c6)
@@ -122,10 +128,10 @@
   <tr>
     <td align="center"><a href="https://github.com/bongbong1234/bareumi/edit/master" target='_blank'>github</a></td>
     <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/Song-geon-chang" target='_blank'>github</a></td>
     <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/CingDam" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/halong61" target='_blank'>github</a></td>
   </tr>
 </table>
 
