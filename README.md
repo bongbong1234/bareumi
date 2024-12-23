@@ -86,15 +86,19 @@
 * 메인페이지
 <br/>
 ![image](https://github.com/user-attachments/assets/0516ecf3-cdaa-4e5b-8fd9-fd992ab42bb1)
+
 * 기록 페이지
 <br/>
 ![KakaoTalk_20241220_113427635](https://github.com/user-attachments/assets/35277d69-9f23-477a-bb06-55ae1e973b3d)
+
 * 알림설정페이지
 <br/>
 ![KakaoTalk_20241220_113427635_03](https://github.com/user-attachments/assets/ccc57ce7-69cf-4e38-9aa4-56982132eb23)
+
 * 사용자설정 페이지
 <br/>
 ![KakaoTalk_20241220_113427635_02](https://github.com/user-attachments/assets/3b7871a9-e951-4e0c-870f-94b8d2a1f448)
+
 * 맞춤제품 추천 페이지
 <br/>
 ![KakaoTalk_20241220_113427635_01](https://github.com/user-attachments/assets/c873c01f-d2ae-4857-930b-ea0a85046d66)
@@ -142,6 +146,6 @@
 ![image](https://github.com/user-attachments/assets/e400f8e7-fcda-44c6-9dce-98a6818eecb5)
 
 - 문제2
-  * 
-
+  * Webserver와 센서 연동에 어려움이 있었는데, WebSocket을 사용하여 통신에 성공함
+    
 
