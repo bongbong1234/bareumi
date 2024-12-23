@@ -1,4 +1,4 @@
-# 바르미(팀명 : Bareumi)
+![image](https://github.com/user-attachments/assets/eca5ae95-be5e-475e-9f2d-8c5a4bc47f4c)# 바르미(팀명 : Bareumi)
 
 ## 서비스 소개
 * 서비스명 : 개인맞춤형 자세 교정 모바일 서비스
@@ -8,10 +8,10 @@
 2024.12.09~2024.12.19(2주)
 
 ## *주요기능
-* 주제: 9축자이로센서를사용해사용자가직접제품을착용하여척추교정의도움을주는웹앱서비스
-* 딥러닝과GPTAPI를사용하여사용자개인맞춤형교정서비스제공
-* 사용자가앱에서센서시작을누르면일일알림데이터를모아딥러닝모델이측만증현황을알려줌
-* 누적된데이터를이용해GPTAPI로상태문장과네이버쇼핑몰과연동하여맞춤상품추천
+* 주제: 9축자이로센서를 사용해 사용자가 직접 제품을 착용하여 척추교정의 도움을 주는 웹앱서비스
+* 딥러닝과 GPTAPI를 사용하여 사용자 개인맞춤형 교정서비스 제공
+* 사용자가 앱에서 센서시작을 누르면 일일알림 데이터를 모아 딥러닝 모델이 측만증 현황을 알려줌
+* 누적된 데이터를 이용해 GPT API로 상태 문장과 네이버쇼핑몰과 연동하여 맞춤 상품 추천
 
 ## 기술스택
 <table>
@@ -35,14 +35,14 @@
         <td> BackEnd</td>
         <td>
            <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white"/>
-           <img src="https://github.com/user-attachments/assets/4c011612-e401-4568-9113-67cf4b32d076&logoColor=white"/> 
+            <img src="https://img.shields.io/badge/express-000000?style=for-the-badge&logo=express&logoColor=white">
         </td>
     </tr>
     <tr>
         <td>DB </td>
         <td>
-             <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white"/>  
-          Firebase
+            <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white"/>  
+          <img src="https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black">
         </td>
     </tr>
     <tr>
@@ -75,17 +75,69 @@
 ![image (1)](https://github.com/user-attachments/assets/5bc90350-59ea-43f6-b602-0413c6d9c8e3)
 
 ## 서비스 흐름도
-
+![image](https://github.com/user-attachments/assets/0e643740-e481-41e7-a2b9-24a3e3194842)
+![image](https://github.com/user-attachments/assets/bf37b4e4-edb3-420a-92c0-c4847a304c20)
+![image](https://github.com/user-attachments/assets/e75a442f-e8df-4b7a-951d-22b10df26669)
 
 ## ER 다이어그램
 ![image](https://github.com/user-attachments/assets/06a77ce6-85b4-4f0d-84bd-5d6ae234d3c6)
 
 ## 화면구성
+* 메인페이지
+![image](https://github.com/user-attachments/assets/0516ecf3-cdaa-4e5b-8fd9-fd992ab42bb1)
+* 기록 페이지
+![KakaoTalk_20241220_113427635](https://github.com/user-attachments/assets/35277d69-9f23-477a-bb06-55ae1e973b3d)
+* 알림설정페이지
+![KakaoTalk_20241220_113427635_03](https://github.com/user-attachments/assets/ccc57ce7-69cf-4e38-9aa4-56982132eb23)
+* 사용자설정 페이지
+![KakaoTalk_20241220_113427635_02](https://github.com/user-attachments/assets/3b7871a9-e951-4e0c-870f-94b8d2a1f448)
+* 맞춤제품 추천 페이지
+![KakaoTalk_20241220_113427635_01](https://github.com/user-attachments/assets/c873c01f-d2ae-4857-930b-ea0a85046d66)
 
 ## 팀원역할
 ![image](https://github.com/user-attachments/assets/b0f917d7-89b0-4689-b097-5c4ecfe0dcad)
+<table>
+  <tr>
+    <td align="center"><img src="https://github.com/user-attachments/assets/d04ae20d-0fe9-4c7a-9c25-c1d09924d36c" width="100" height="100"/></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/ec4bfa8a-9052-421f-bc00-f1534650bfb0" width="100" height="100"/></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/e8e44d48-0623-46fd-b635-d8e1aadc3eba" width="100" height="100"/></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/d03fef22-1b27-49e0-b697-1ba0dc406fbe" width="100" height="100"/></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/e2a30e5d-bc86-4db5-b5e7-adbbbd371db5" width="100" height="100"/></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/293e2060-c7a7-4e38-9172-0fb025c2093c" width="100" height="100"/></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>김보라</strong></td>
+    <td align="center"><strong>김옥현</strong></td>
+    <td align="center"><strong>송건창</strong></td>
+    <td align="center"><strong>전정우</strong></td>
+    <td align="center"><strong>정제원</strong></td>
+    <td align="center"><strong>한승찬</strong></td>
+  </tr>
+  <tr>
+    <td align="center"><b>IoT 설계 및 제작, 서류 작성, Back-End</b></td>
+    <td align="center"><b>Notion 관리, 서류 작성</b></td>
+    <td align="center"><b>Front-End, 개발 및 디자인</b></td>
+    <td align="center"><b>아이디어 제안, 서류 작성</b></td>
+    <td align="center"><b>Back-End, Front-End, 디자인, 발표</b></td>
+    <td align="center"><b>Notion 관리, IoT 회로구성, 딥러닝, PPT 제작, 시연영상</b></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/bongbong1234/bareumi/edit/master" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
+  </tr>
+</table>
+
 
 ## 트러블슈팅
-
+- 문제1
+  * 자이로센서의 값이 불안정하게 출력되어서 어려움이 있었는데,  컴플리멘터리 필터를 적용하여 일정한 센서값은 출력받음 
 ![image](https://github.com/user-attachments/assets/e400f8e7-fcda-44c6-9dce-98a6818eecb5)
+
+- 문제2
+  * 
+
 
