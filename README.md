@@ -13,7 +13,7 @@
 * 사용자가앱에서센서시작을누르면일일알림데이터를모아딥러닝모델이측만증현황을알려줌
 * 누적된데이터를이용해GPTAPI로상태문장과네이버쇼핑몰과연동하여맞춤상품추천
 
-##기술스택
+## 기술스택
 <table>
     <tr>
         <th>구분</th>
@@ -35,7 +35,7 @@
         <td> BackEnd</td>
         <td>
            <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white"/>
-           express로 밬꾸ㅡ기<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white"/> 
+           <img src="https://github.com/user-attachments/assets/4c011612-e401-4568-9113-67cf4b32d076&logoColor=white"/> 
         </td>
     </tr>
     <tr>
@@ -48,8 +48,8 @@
     <tr>
         <td> API</td>
         <td>
-            GPT api 
-          Naver쇼핑몰API
+            GPT API
+            Naver쇼핑몰 API
         </td>
     </tr>
     <tr>
@@ -61,7 +61,7 @@
         <tr>
         <td> DesignTool</td>
         <td>
-             Figma
+             <img src="https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white">
         </td>
     </tr>
 </table>
