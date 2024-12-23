@@ -48,9 +48,7 @@
     <tr>
         <td> API</td>
         <td>
-            GPT API 
-            <br/>
-            Naver쇼핑몰 API
+            GPT API, Naver쇼핑몰 API
         </td>
     </tr>
     <tr>
@@ -105,14 +103,6 @@
 
 ## 팀원역할
 <table>
-  <tr>
-    <td align="center"><img src="https://github.com/user-attachments/assets/d04ae20d-0fe9-4c7a-9c25-c1d09924d36c" width="100" height="100"/></td>
-    <td align="center"><img src="https://github.com/user-attachments/assets/ec4bfa8a-9052-421f-bc00-f1534650bfb0" width="100" height="100"/></td>
-    <td align="center"><img src="https://github.com/user-attachments/assets/e8e44d48-0623-46fd-b635-d8e1aadc3eba" width="100" height="100"/></td>
-    <td align="center"><img src="https://github.com/user-attachments/assets/e3cb263d-830c-4c76-bcd9-510ec2822d88" width="100" height="100"/></td>
-    <td align="center"><img src="https://github.com/user-attachments/assets/e2a30e5d-bc86-4db5-b5e7-adbbbd371db5" width="100" height="100"/></td>
-    <td align="center"><img src="https://github.com/user-attachments/assets/293e2060-c7a7-4e38-9172-0fb025c2093c" width="100" height="100"/></td>
-  </tr>
   <tr>
     <td align="center"><strong>김보라</strong></td>
     <td align="center"><strong>김옥현</strong></td>
