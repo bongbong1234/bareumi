@@ -84,6 +84,7 @@
 
 ## 화면구성
 * 메인페이지
+<br/>
 ![image](https://github.com/user-attachments/assets/0516ecf3-cdaa-4e5b-8fd9-fd992ab42bb1)
 * 기록 페이지
 ![KakaoTalk_20241220_113427635](https://github.com/user-attachments/assets/35277d69-9f23-477a-bb06-55ae1e973b3d)
