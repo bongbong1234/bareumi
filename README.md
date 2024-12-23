@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/eca5ae95-be5e-475e-9f2d-8c5a4bc47f4c)# 바르미(팀명 : Bareumi)
+# 바르미(팀명 : Bareumi)
 
 ## 서비스 소개
 * 서비스명 : 개인맞춤형 자세 교정 모바일 서비스
@@ -48,7 +48,8 @@
     <tr>
         <td> API</td>
         <td>
-            GPT API
+            GPT API 
+            <br/>
             Naver쇼핑몰 API
         </td>
     </tr>
@@ -65,7 +66,6 @@
         </td>
     </tr>
 </table>
-
 <br>
 
 ## 시스템 아키텍처
@@ -87,16 +87,19 @@
 <br/>
 ![image](https://github.com/user-attachments/assets/0516ecf3-cdaa-4e5b-8fd9-fd992ab42bb1)
 * 기록 페이지
+<br/>
 ![KakaoTalk_20241220_113427635](https://github.com/user-attachments/assets/35277d69-9f23-477a-bb06-55ae1e973b3d)
 * 알림설정페이지
+<br/>
 ![KakaoTalk_20241220_113427635_03](https://github.com/user-attachments/assets/ccc57ce7-69cf-4e38-9aa4-56982132eb23)
 * 사용자설정 페이지
+<br/>
 ![KakaoTalk_20241220_113427635_02](https://github.com/user-attachments/assets/3b7871a9-e951-4e0c-870f-94b8d2a1f448)
 * 맞춤제품 추천 페이지
+<br/>
 ![KakaoTalk_20241220_113427635_01](https://github.com/user-attachments/assets/c873c01f-d2ae-4857-930b-ea0a85046d66)
 
 ## 팀원역할
-![image](https://github.com/user-attachments/assets/b0f917d7-89b0-4689-b097-5c4ecfe0dcad)
 <table>
   <tr>
     <td align="center"><img src="https://github.com/user-attachments/assets/d04ae20d-0fe9-4c7a-9c25-c1d09924d36c" width="100" height="100"/></td>
