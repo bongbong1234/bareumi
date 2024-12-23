@@ -1,19 +1,19 @@
 # 바르미(팀명 : Bareumi)
 
-## 서비스 소개
+## 💥서비스 소개
 * 서비스명 : 개인맞춤형 자세 교정 모바일 서비스
 * 서비스 설명 : 불량자세를 취할 시 개인에겍 알림을 제공하고, 딥러닝으로 패턴을 분석하여 사용자가 올바른 자세를 유지하도록 도움을 주는 서비스 
 
-## 프로젝트기간
+## 🎈프로젝트기간
 2024.12.09~2024.12.19(2주)
 
-## 주요기능
+## ✨주요기능
 * 주제: 9축자이로센서를 사용해 사용자가 직접 제품을 착용하여 척추교정의 도움을 주는 웹앱서비스
 * 딥러닝과 GPTAPI를 사용하여 사용자 개인맞춤형 교정서비스 제공
 * 사용자가 앱에서 센서시작을 누르면 일일알림 데이터를 모아 딥러닝 모델이 측만증 현황을 알려줌
 * 누적된 데이터를 이용해 GPT API로 상태 문장과 네이버쇼핑몰과 연동하여 맞춤 상품 추천
 
-## 기술스택
+## 🔨기술스택
 <table>
     <tr>
         <th>구분</th>
@@ -54,7 +54,7 @@
     <tr>
         <td>DeepRunning</td>
         <td>
-           CNNModel
+           CNN Model
         </td>
     </tr>
         <tr>
@@ -66,13 +66,13 @@
 </table>
 <br>
 
-## 시스템 아키텍처
+## 🎉시스템 아키텍처
 ![image](https://github.com/user-attachments/assets/323dbf8f-54df-4a07-afe6-e8ba2e81a73f)
 
-## 유스케이스
+## 🖼유스케이스
 ![image (1)](https://github.com/user-attachments/assets/5bc90350-59ea-43f6-b602-0413c6d9c8e3)
 
-## 서비스 흐름도
+## 📊서비스 흐름도
 * 메인화면 접속 프로세스
       <br/>
   ![image](https://github.com/user-attachments/assets/b63f2b0f-3ed9-4cbb-83d5-a644f4a4a9ed)
@@ -83,10 +83,10 @@
       <br/>
   ![image](https://github.com/user-attachments/assets/b13b94ce-829a-4f61-89f3-61bd7a0f49b3)
 
-## ER 다이어그램
+## 🗂ER 다이어그램
 ![image](https://github.com/user-attachments/assets/06a77ce6-85b4-4f0d-84bd-5d6ae234d3c6)
 
-## 화면구성
+## 📱화면구성
 * 메인페이지
    <br/>
 ![image](https://github.com/user-attachments/assets/0516ecf3-cdaa-4e5b-8fd9-fd992ab42bb1)
@@ -107,7 +107,7 @@
     <br/>
 ![KakaoTalk_20241220_113427635_01](https://github.com/user-attachments/assets/c873c01f-d2ae-4857-930b-ea0a85046d66)
 
-## 팀원역할
+## 👨‍👩‍👧‍👧팀원역할
 <table>
   <tr>
     <td align="center"><strong>김보라</strong></td>
@@ -136,7 +136,7 @@
 </table>
 
 
-## 트러블슈팅
+## 💢트러블슈팅
 - 문제1
   * 자이로센서의 값이 불안정하게 출력되어서 어려움이 있었는데,  컴플리멘터리 필터를 적용하여 일정한 센서값은 출력받음 
 ![image](https://github.com/user-attachments/assets/e400f8e7-fcda-44c6-9dce-98a6818eecb5)
