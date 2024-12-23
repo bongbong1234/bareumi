@@ -129,7 +129,7 @@
     <td align="center"><a href="https://github.com/bongbong1234/bareumi/edit/master" target='_blank'>github</a></td>
     <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
     <td align="center"><a href="https://github.com/Song-geon-chang" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/envy-logi" target='_blank'>github</a></td>
     <td align="center"><a href="https://github.com/CingDam" target='_blank'>github</a></td>
     <td align="center"><a href="https://github.com/halong61" target='_blank'>github</a></td>
   </tr>
