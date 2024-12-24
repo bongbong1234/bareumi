@@ -1,7 +1,22 @@
 #include "MPU9250.h"
+#include <WiFi.h>
+#include <HTTPClient.h>
+#include <WebServer.h>
+#include <WebSocketsClient.h>
+
+MPU9250 mpu;
+
+const char* ssid = "AICAM_301B"; //WiFi의 이름 => ESP32는 와이파이 주파수가 2.4Ghz밖에 못씀
+const char* password = "a123456789"; // 와이파이의 비밀번호 
+const char* websocketServer = "127.0.0.0";  // Flask 서버 IP
+const int websocketPort = 5000;
+
+WebSocketsClient webSocket;
 
 // MPU9250 객체 생성
 MPU9250 mpu;
+
+
 
 // 초기값 저장 변수
 float initialYaw = 0.0, initialPitch = 0.0, initialRoll = 0.0; // 초기
@@ -25,6 +40,57 @@ const int ledPin = 13; // LED 또는 전구 연결 핀
 unsigned long lastBlinkTime = 0;  // 마지막 깜박임 시간
 bool ledState = LOW;               // LED 상태 (켜짐/꺼짐)
 unsigned long blinkInterval = 1000; // 깜박임 간격 (1초)
+
+
+void webSocketEvent(WStype_t type, uint8_t * payload, size_t length) {
+  switch (type) {
+    case WStype_CONNECTED:
+      Serial.println("WebSocket Connected!");
+      webSocket.sendTXT("Hello from ESP32!");
+      break;
+    case WStype_DISCONNECTED:
+      Serial.println("WebSocket Disconnected!");
+      break;
+    case WStype_TEXT:
+      Serial.print("Received Update: ");
+      Serial.println((char*)payload); // 서버에서 보낸 데이터 출력
+      Serial.println(strcmp((char*)payload, "ON") == 0);
+      if(strcmp((char*)payload, "ON") == 0) {
+        mpuEnable = true;
+      } else if (strcmp((char*)payload, "OFF") == 0) {
+        mpuEnable = false;
+      }
+      break;
+    default:
+      break;
+  }
+}
+
+void setup() {
+    Serial.begin(115200);
+    Wire.begin();
+    WiFi.begin(ssid,password);
+    delay(2000);
+
+    while(WiFi.status() != WL_CONNECTED){ // WIFI의 상태가 연결이 안되어 있다면
+      delay(1000);
+      Serial.println("Wifi에 연결중");
+    }
+    //while문에서 탈출하면 나오는 시리얼 로그
+    Serial.println("연결성공");
+
+    webSocket.begin(websocketServer, websocketPort, "/ws");
+    webSocket.onEvent(webSocketEvent);
+
+    if (!mpu.setup(0x68)) {  // MPU9250의 I2C 주소 (기본값: 0x68)
+        while (1) {
+            Serial.println("MPU connection failed. Please check your connection with `connection_check` example.");
+            delay(5000);
+        }
+    }
+    pinMode(ledPin, OUTPUT); // LED 핀을 출력으로 설정
+    digitalWrite(ledPin, LOW); // 초기 LED 상태 OFF    
+}
 
 void setup() {
     Serial.begin(115200); // 시리얼 통신 시작

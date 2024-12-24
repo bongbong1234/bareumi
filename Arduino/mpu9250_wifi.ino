@@ -8,7 +8,7 @@ MPU9250 mpu;
 
 const char* ssid = "AICAM_301B"; //WiFi의 이름 => ESP32는 와이파이 주파수가 2.4Ghz밖에 못씀
 const char* password = "a123456789"; // 와이파이의 비밀번호 
-const char* websocketServer = "192.168.219.56";  // Flask 서버 IP
+const char* websocketServer = "127.0.0.0";  // Flask 서버 IP
 const int websocketPort = 5000;
 
 WebSocketsClient webSocket;
