@@ -90,7 +90,7 @@ const Setting = ({setModalOn,setName}) => {
             </div>
             <div className="alert-count">
               <p>최소 알림 횟수 :
-                <span>5회</span></p>
+                <span>8회</span></p>
             </div>
           </div>
         </div>
@@ -104,7 +104,7 @@ const Setting = ({setModalOn,setName}) => {
     <div className="pause-box">
       <h3>일시 정지 시간</h3>
       <div className="pause-time">
-        <span>00 : 00 ~ 00: 00</span>
+        <span>12 : 00 ~ 13: 00</span>
       </div>
       <div className="pause-setting" onClick={() => settingChange("pause")}>설정변경</div>
     </div>

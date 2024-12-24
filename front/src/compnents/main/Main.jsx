@@ -12,8 +12,8 @@ const Main = () => {
 
     const [count,setCount] = useState(0);
     const [baseTime, setBaseTime] = useState(8);
-    const [minAlertCount,setMinAlertCount] = useState(5);
-    const [todayAlertCtn,setTodayAlertCtn] = useState(0);
+    const [minAlertCount,setMinAlertCount] = useState(8);
+    const [todayAlertCtn,setTodayAlertCtn] = useState(5);
     const [left,setLeft] = useState(60);
     const [right,setRight] = useState(40);
     const [weekHour, setWeekHour] = useState([]);
@@ -30,7 +30,7 @@ const Main = () => {
     
 
     const minHourOptions = {
-    series: [(baseTime-hours),hours],
+    series: [(baseTime-7),7],
     options: {
             chart: {
             type: 'donut',

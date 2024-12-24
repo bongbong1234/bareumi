@@ -34,6 +34,7 @@
 }
 
 .fix-btn {
+  display: none;
   padding: 10px;
   position: fixed;
   bottom: 70px; left: calc(100% - 840px)
